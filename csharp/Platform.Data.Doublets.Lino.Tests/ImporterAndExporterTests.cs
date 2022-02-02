@@ -47,20 +47,35 @@ public class ImporterAndExporterTests
     //         new(storage, numberToAddressConverter, unicodeSymbolCriterionMatcher);
     //     var balancedVariantConverter = new BalancedVariantConverter<TLinkAddress>(storage);
     //     var stringToUnicodeSequenceConverter = new CachingConverterDecorator<string, TLinkAddress>(new StringToUnicodeSequenceConverter<TLinkAddress>(storage, charToUnicodeSymbolConverter, balancedVariantConverter, unicodeSequenceMarker));
-    //     ILinoDocumentsStorage<TLinkAddress> linoDocumentsStorage = new DefaultLinoDocumentsDocumentsStorage<TLinkAddress>(storage);
+    //     ILinoDocumentsStorage<TLinkAddress> linoDocumentsStorage = new LinoDocumentsStorage<TLinkAddress>(storage);
     //     LinoImporter<TLinkAddress> linoImporter = new(linoDocumentsStorage);
     //     linoImporter.Import(notation);
     //     var linoExporter = new LinoExporter<TLinkAddress>(linoDocumentsStorage);
     // }
 
-        [InlineData("(1: 1 1)")]
+    [InlineData("(1: 1 1)")]
     [InlineData("(1: 1 1)\n(2: 2 2)")]
     [InlineData("(1: 2 2)\n(2: 1 1)")]
     [Theory]
-    public void Test1(string notation)
+    public void LinoStorageTest(string notation)
     {
         var storage = CreateLinks();
         var linoStorage = new DefaultLinoStorage<TLinkAddress>(storage);
+        var importer = new LinoImporter<TLinkAddress>(linoStorage);
+        importer.Import(notation);
+        var exporter = new LinoExporter<TLinkAddress>(linoStorage);
+        var exportedLinks = exporter.GetAllLinks();
+        Assert.Equal(notation, exportedLinks);
+    }
+
+    [InlineData("(1: 1 1)")]
+    [InlineData("(1: 1 1)\n(2: 2 2)")]
+    [InlineData("(1: 2 2)\n(2: 1 1)")]
+    [Theory]
+    public void LinoDocumentStorageTest(string notation)
+    {
+        var storage = CreateLinks();
+        var linoStorage = new LinoDocumentsStorage<TLinkAddress>(storage);
         var importer = new LinoImporter<TLinkAddress>(linoStorage);
         importer.Import(notation);
         var exporter = new LinoExporter<TLinkAddress>(linoStorage);
