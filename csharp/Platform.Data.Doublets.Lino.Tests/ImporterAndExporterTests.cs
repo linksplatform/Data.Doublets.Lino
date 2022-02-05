@@ -75,7 +75,7 @@ public class ImporterAndExporterTests
     public void LinoDocumentStorageTest(string notation)
     {
         var storage = CreateLinks();
-        var linoStorage = new LinoDocumentsStorage<TLinkAddress>(storage);
+        var linoStorage = new LinoDocumentsStorage<TLinkAddress>(storage, new BalancedVariantConverter<ulong>(storage));
         var importer = new LinoImporter<TLinkAddress>(linoStorage);
         importer.Import(notation);
         var exporter = new LinoExporter<TLinkAddress>(linoStorage);
