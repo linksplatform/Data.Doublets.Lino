@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using Platform.Collections;
 using Platform.Collections.Stacks;
 using Platform.Communication.Protocol.Lino;
@@ -47,6 +49,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
         public TLinkAddress DocumentMarker { get; }
 
         public TLinkAddress ReferenceMarker { get; }
+        public TLinkAddress LinkMarker { get; }
         private TLinkAddress _markerIndex { get; set; }
 
         private IConverter<IList<TLinkAddress>?, TLinkAddress> _listToSequenceConverter;
@@ -63,6 +66,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             var unicodeSequenceMarker = storage.GetOrCreate(MeaningRoot, Arithmetic.Increment(ref markerIndex));
             DocumentMarker = storage.GetOrCreate(MeaningRoot, Arithmetic.Increment(ref markerIndex));
             ReferenceMarker = storage.GetOrCreate(MeaningRoot, Arithmetic.Increment(ref markerIndex));
+            LinkMarker = storage.GetOrCreate(MeaningRoot, Arithmetic.Increment(ref markerIndex));
             BalancedVariantConverter<TLinkAddress> balancedVariantConverter = new(storage);
             TargetMatcher<TLinkAddress> unicodeSymbolCriterionMatcher = new(storage, unicodeSymbolMarker);
             TargetMatcher<TLinkAddress> unicodeSequenceCriterionMatcher = new(storage, unicodeSequenceMarker);
@@ -103,42 +107,58 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
 
         public void CreateLinks(IList<LinoLink> links)
         {
-            var references = new Dictionary<string, TLinkAddress>();
+            var sequenceList = new List<TLinkAddress>();
             for (int i = 0; i < links.Count; i++)
             {
-                var currentLink = links[i];
-                var currentReference = GetOrCreateReferenceLink(currentLink.Id);
-                references.Add(currentLink.Id, currentReference);
-                var valueSequence = ProcessValues(currentLink, references);
-                Storage.GetOrCreate(currentReference, valueSequence);
+                sequenceList.Add(CreateLink(links[i]));
             }
+            Storage.GetOrCreate(DocumentMarker, _listToSequenceConverter.Convert(sequenceList));
         }
 
-        public TLinkAddress ProcessValues(LinoLink link, Dictionary<string, TLinkAddress> references)
+        public TLinkAddress CreateLink(LinoLink link)
         {
-            var valueReferences = new List<TLinkAddress>(link.Values.Count);
-            for (int i = 0; i < link.Values.Count; i++)
+            TLinkAddress currentReference = GetOrCreateReferenceLink(link.Id);
+            if (link.Values == null)
             {
-                var currentValue = link.Values[i];
-                var currentReference = GetOrCreateReferenceLink(currentValue.Id);
-                valueReferences.Add(currentReference);
-                references.Add(currentValue.Id, currentReference);
-                if (link.Values.IsNullOrEmpty())
-                {
-                    // ???????
-                }
-                else
-                {
-                    var valueSequence = ProcessValues(currentValue, references);
-                    Storage.GetOrCreate(currentReference, valueSequence);
-                }
+                return currentReference;
+            }
+            var valuesSequence = CreateValuesSequence(link);
+            var idWithValues = Storage.GetOrCreate(currentReference, valuesSequence);
+            return Storage.GetOrCreate(LinkMarker, idWithValues);
+        }
 
+        public TLinkAddress CreateValuesSequence(LinoLink parent)
+        {
+            var valueReferences = new List<TLinkAddress>(parent.Values.Count);
+            for (int i = 0; i < parent.Values.Count; i++)
+            {
+                var currentValue = parent.Values[i];
+                var currentValueReference = GetOrCreateReferenceLink(currentValue.Id);
+                valueReferences.Add(currentValueReference);
             }
             return _listToSequenceConverter.Convert(valueReferences);
         }
 
         public IList<LinoLink> GetLinks()
         {
-            throw new NotImplementedException();
+            var any = Storage.Constants.Any;
+            var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), linkIndex => _equalityComparer.Equals(ReferenceMarker, Storage.GetSource(linkIndex)));
+            TLinkAddress linksSequence = default;
+            Storage.Each(DocumentMarker, any, link =>
+            {
+                linksSequence = Storage.GetTarget((IList<TLinkAddress>)link);
+
+                return Storage.Constants.Continue;
+            });
+            if (_equalityComparer.Equals(default, linksSequence))
+            {
+                throw new Exception("No one link in storage.");
+            }
+            var sequence = rightSequenceWalker.Walk(linksSequence);
+            foreach (var documentLink in sequence)
+            {
+
+            }
+            return default;
         }
 }
