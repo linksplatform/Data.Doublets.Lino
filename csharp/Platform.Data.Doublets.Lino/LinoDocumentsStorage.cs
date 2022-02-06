@@ -142,7 +142,13 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
         public IList<LinoLink> GetLinks()
         {
             var any = Storage.Constants.Any;
-            var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), linkIndex => _equalityComparer.Equals(ReferenceMarker, Storage.GetSource(linkIndex)));
+
+            bool IsElement(TLinkAddress linkIndex)
+            {
+                return _equalityComparer.Equals(LinkMarker, Storage.GetSource(linkIndex)) || Storage.IsPartialPoint(linkIndex);
+            }
+
+            var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsElement);
             TLinkAddress linksSequence = default;
             Storage.Each(DocumentMarker, any, link =>
             {
@@ -157,7 +163,13 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             var sequence = rightSequenceWalker.Walk(linksSequence);
             foreach (var documentLink in sequence)
             {
-
+                Console.WriteLine(Storage.Format(documentLink));
+                var currendLinkSuqence = rightSequenceWalker.Walk(Storage.GetTarget(documentLink));
+                foreach (var currentLinkValues in currendLinkSuqence)
+                {
+                    // Console.WriteLine(((ILinks<ulong>)Storage).FormatStructure(currentLinkValues, link => link.IsFullPoint(), true));
+                    Console.WriteLine($"CurrentLinkValues {Storage.Format(currentLinkValues)}");
+                }
             }
             return default;
         }
