@@ -133,6 +133,10 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             for (int i = 0; i < parent.Values.Count; i++)
             {
                 var currentValue = parent.Values[i];
+                // if (currentValue.Values != null)
+                // {
+                //     return CreateLink(currentValue);
+                // }
                 var currentValueReference = GetOrCreateReferenceLink(currentValue.Id);
                 valueReferences.Add(currentValueReference);
             }
@@ -141,19 +145,17 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
 
         public IList<LinoLink> GetLinks()
         {
+            var resultLinks = new List<LinoLink>();
             var any = Storage.Constants.Any;
-
             bool IsElement(TLinkAddress linkIndex)
             {
                 return _equalityComparer.Equals(LinkMarker, Storage.GetSource(linkIndex)) || Storage.IsPartialPoint(linkIndex);
             }
-
             var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsElement);
             TLinkAddress linksSequence = default;
             Storage.Each(DocumentMarker, any, link =>
             {
                 linksSequence = Storage.GetTarget((IList<TLinkAddress>)link);
-
                 return Storage.Constants.Continue;
             });
             if (_equalityComparer.Equals(default, linksSequence))
@@ -163,14 +165,51 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             var sequence = rightSequenceWalker.Walk(linksSequence);
             foreach (var documentLink in sequence)
             {
-                Console.WriteLine(Storage.Format(documentLink));
-                var currendLinkSuqence = rightSequenceWalker.Walk(Storage.GetTarget(documentLink));
-                foreach (var currentLinkValues in currendLinkSuqence)
-                {
-                    // Console.WriteLine(((ILinks<ulong>)Storage).FormatStructure(currentLinkValues, link => link.IsFullPoint(), true));
-                    Console.WriteLine($"CurrentLinkValues {Storage.Format(currentLinkValues)}");
-                }
+                resultLinks.Add(GetLink(documentLink));
             }
-            return default;
+            return resultLinks;
+        }
+
+        public LinoLink GetLink(TLinkAddress link) => GetLink(Storage.GetLink(link));
+
+        public LinoLink GetLink(IList<TLinkAddress> link)
+        {
+            string id = default;
+            var values = new List<LinoLink>();
+            var linkStruct = new Link<TLinkAddress>(link);
+            if (!_equalityComparer.Equals(LinkMarker, linkStruct.Source))
+            {
+                throw new Exception("The source of the passed link is not the link marker.");
+            }
+            bool IsElement(TLinkAddress linkIndex)
+            {
+                var source = Storage.GetSource(linkIndex);
+                return _equalityComparer.Equals(LinkMarker, source) || _equalityComparer.Equals(ReferenceMarker, source) || Storage.IsPartialPoint(linkIndex);
+            }
+            var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsElement);
+            foreach (var currentLink in rightSequenceWalker.Walk(linkStruct.Target))
+            {
+                var currentLinkStruct = new Link<TLinkAddress>(Storage.GetLink(currentLink));
+                if (_equalityComparer.Equals(LinkMarker, currentLinkStruct.Source))
+                {
+                    var value = GetLink(currentLinkStruct.Target);
+                    values.Add(value);
+                    continue;
+                }
+                if (_equalityComparer.Equals(ReferenceMarker, currentLinkStruct.Source))
+                {
+                    if (default == id)
+                    {
+                        id = ReadReference(currentLinkStruct);
+                    }
+                    else
+                    {
+                        var currentLinoLink = new LinoLink(ReadReference(currentLinkStruct));
+                        values.Add(currentLinoLink);
+                    }
+                }
+
+            }
+            return new LinoLink(id, values);
         }
 }
