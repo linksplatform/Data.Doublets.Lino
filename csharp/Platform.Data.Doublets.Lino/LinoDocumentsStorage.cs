@@ -129,18 +129,20 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
 
         public TLinkAddress CreateValuesSequence(LinoLink parent)
         {
-            var valueReferences = new List<TLinkAddress>(parent.Values.Count);
+            var values = new List<TLinkAddress>(parent.Values.Count);
             for (int i = 0; i < parent.Values.Count; i++)
             {
                 var currentValue = parent.Values[i];
-                // if (currentValue.Values != null)
-                // {
-                //     return CreateLink(currentValue);
-                // }
+                if (currentValue.Values != null)
+                {
+                    var valueLink = CreateLink(currentValue);
+                    values.Add(valueLink);
+                    continue;
+                }
                 var currentValueReference = GetOrCreateReferenceLink(currentValue.Id);
-                valueReferences.Add(currentValueReference);
+                values.Add(currentValueReference);
             }
-            return _listToSequenceConverter.Convert(valueReferences);
+            return _listToSequenceConverter.Convert(values);
         }
 
         public IList<LinoLink> GetLinks()
@@ -192,7 +194,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
                 var currentLinkStruct = new Link<TLinkAddress>(Storage.GetLink(currentLink));
                 if (_equalityComparer.Equals(LinkMarker, currentLinkStruct.Source))
                 {
-                    var value = GetLink(currentLinkStruct.Target);
+                    var value = GetLink(currentLinkStruct);
                     values.Add(value);
                     continue;
                 }
