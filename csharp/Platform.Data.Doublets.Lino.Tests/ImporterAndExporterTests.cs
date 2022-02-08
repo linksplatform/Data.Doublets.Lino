@@ -70,7 +70,11 @@ public class ImporterAndExporterTests
 
     [InlineData("(1: 1 1)")]
     [InlineData("(1: 1 1)\n(2: 2 2)")]
+    [InlineData("(2: 2 2)")]
+    [InlineData("(1: 2 2)")]
     [InlineData("(1: 2 2)\n(2: 1 1)")]
+    [InlineData("(1: 2 (3: 3 3))")]
+    [InlineData("(1: 2 (3: 3 3))\n(2: 1 1)")]
     [Theory]
     public void LinoDocumentStorageTest(string notation)
     {
@@ -78,6 +82,8 @@ public class ImporterAndExporterTests
         var linoStorage = new LinoDocumentsStorage<TLinkAddress>(storage, new BalancedVariantConverter<ulong>(storage));
         var importer = new LinoImporter<TLinkAddress>(linoStorage);
         importer.Import(notation);
+        var anotherLinoStorage = new DefaultLinoStorage<TLinkAddress>(storage);
+        // var exporter = new LinoExporter<TLinkAddress>(anotherLinoStorage);
         var exporter = new LinoExporter<TLinkAddress>(linoStorage);
         var exportedLinks = exporter.GetAllLinks();
         Assert.Equal(notation, exportedLinks);
