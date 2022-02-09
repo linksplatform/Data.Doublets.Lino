@@ -1,11 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using Platform.Converters;
-using Platform.Data;
-using Platform.Data.Doublets;
 using LinoLink = Platform.Communication.Protocol.Lino.Link;
 
-namespace DefaultNamespace;
+namespace Platform.Data.Doublets.Lino;
 
 public class DefaultLinoStorage<TLinkAddress> : ILinoStorage<TLinkAddress> where TLinkAddress : struct
 {

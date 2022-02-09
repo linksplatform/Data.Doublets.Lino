@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Platform.Communication.Protocol.Lino;
 
-namespace DefaultNamespace;
+namespace Platform.Data.Doublets.Lino;
 
 public interface ILinoStorage<TLinkAddress>
 {

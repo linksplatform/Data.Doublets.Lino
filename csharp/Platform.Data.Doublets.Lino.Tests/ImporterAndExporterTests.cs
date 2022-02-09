@@ -1,4 +1,3 @@
-using DefaultNamespace;
 using Platform.Converters;
 using Platform.Data.Doublets.CriterionMatchers;
 using Platform.Data.Doublets.Memory;

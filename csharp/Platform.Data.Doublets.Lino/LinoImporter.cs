@@ -1,12 +1,6 @@
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
 using Platform.Communication.Protocol.Lino;
-using Platform.Converters;
-using Platform.Data.Doublets;
-using LinoLink = Platform.Communication.Protocol.Lino.Link;
 
-namespace DefaultNamespace;
+namespace Platform.Data.Doublets.Lino;
 
 public class LinoImporter<TLinkAddress> where TLinkAddress : struct
 {

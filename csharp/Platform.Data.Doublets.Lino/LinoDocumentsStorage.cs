@@ -1,13 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Platform.Collections;
 using Platform.Collections.Stacks;
-using Platform.Communication.Protocol.Lino;
 using Platform.Converters;
-using Platform.Data;
-using Platform.Data.Doublets;
 using Platform.Data.Doublets.CriterionMatchers;
 using Platform.Data.Doublets.Numbers.Rational;
 using Platform.Data.Doublets.Numbers.Raw;
@@ -20,7 +14,7 @@ using Platform.Data.Numbers.Raw;
 using Platform.Numbers;
 using LinoLink = Platform.Communication.Protocol.Lino.Link;
 
-namespace DefaultNamespace;
+namespace Platform.Data.Doublets.Lino;
 
 public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> where TLinkAddress : struct
 {
