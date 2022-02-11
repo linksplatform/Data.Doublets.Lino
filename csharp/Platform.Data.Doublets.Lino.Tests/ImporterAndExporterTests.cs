@@ -54,7 +54,14 @@ public class ImporterAndExporterTests
 
     [InlineData("(1: 1 1)")]
     [InlineData("(1: 1 1)\n(2: 2 2)")]
+    [InlineData("(2: 2 2)")]
+    [InlineData("(1: 2 2)")]
     [InlineData("(1: 2 2)\n(2: 1 1)")]
+    [InlineData("(1: 2 (3: 3 3))")]
+    [InlineData("(1: 2 (3: 3 3))\n(2: 1 1)")]
+    [InlineData("son lovesMama")]
+    [InlineData("papa (lovesMama: loves mama)")]
+    [InlineData("papa (lovesMama: loves mama)\nson lovesMama\ndaughter lovesMama\nall (love mama)")]
     [Theory]
     public void LinoStorageTest(string notation)
     {
@@ -74,6 +81,9 @@ public class ImporterAndExporterTests
     [InlineData("(1: 2 2)\n(2: 1 1)")]
     [InlineData("(1: 2 (3: 3 3))")]
     [InlineData("(1: 2 (3: 3 3))\n(2: 1 1)")]
+    [InlineData("son lovesMama")]
+    [InlineData("papa (lovesMama: loves mama)")]
+    [InlineData("papa (lovesMama: loves mama)\nson lovesMama\ndaughter lovesMama\nall (love mama)")]
     [Theory]
     public void LinoDocumentStorageTest(string notation)
     {
