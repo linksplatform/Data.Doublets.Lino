@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Description>LinksPlatform's Platform.Data.Doublets.Lino.Importer CLI tool (lino2links).</Description>
+        <Copyright>FreePhoenix888</Copyright>
+        <AssemblyTitle>Platform.Data.Doublets.Lino.Importer</AssemblyTitle>
+        <VersionPrefix>0.1.0</VersionPrefix>
+        <Authors>FreePhoenix888</Authors>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6</TargetFramework>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>lino2links</ToolCommandName>
+        <AssemblyName>Platform.Data.Doublets.Lino.Importer</AssemblyName>
+        <PackageId>lino2links</PackageId>
+        <PackageTags>LinksPlatform;Data;Doublets;Lino;Importer</PackageTags>
+        <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
+        <PackageProjectUrl>https://linksplatform.github.io/Data.Doublets.Lino.Importer</PackageProjectUrl>
+        <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>git://github.com/linksplatform/Data.Doublets.Lino</RepositoryUrl>
+        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PackageReleaseNotes>Arguments order is changed.</PackageReleaseNotes>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="All" />
+    </ItemGroup>
+
+</Project>
