@@ -1,0 +1,560 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Platform.Data.Doublets.Lino
+  name: Platform.Data.Doublets.Lino
+  href: api/Platform.Data.Doublets.Lino.html
+  commentId: N:Platform.Data.Doublets.Lino
+  fullName: Platform.Data.Doublets.Lino
+  nameWithType: Platform.Data.Doublets.Lino
+- uid: Platform.Data.Doublets.Lino.DefaultLinoStorage`1
+  name: DefaultLinoStorage<TLinkAddress>
+  href: api/Platform.Data.Doublets.Lino.DefaultLinoStorage-1.html
+  commentId: T:Platform.Data.Doublets.Lino.DefaultLinoStorage`1
+  name.vb: DefaultLinoStorage(Of TLinkAddress)
+  fullName: Platform.Data.Doublets.Lino.DefaultLinoStorage<TLinkAddress>
+  fullName.vb: Platform.Data.Doublets.Lino.DefaultLinoStorage(Of TLinkAddress)
+  nameWithType: DefaultLinoStorage<TLinkAddress>
+  nameWithType.vb: DefaultLinoStorage(Of TLinkAddress)
+- uid: Platform.Data.Doublets.Lino.DefaultLinoStorage`1.#ctor(ILinks{`0})
+  name: DefaultLinoStorage(ILinks<TLinkAddress>)
+  href: api/Platform.Data.Doublets.Lino.DefaultLinoStorage-1.html#Platform_Data_Doublets_Lino_DefaultLinoStorage_1__ctor_ILinks__0__
+  commentId: M:Platform.Data.Doublets.Lino.DefaultLinoStorage`1.#ctor(ILinks{`0})
+  name.vb: DefaultLinoStorage(ILinks(Of TLinkAddress))
+  fullName: Platform.Data.Doublets.Lino.DefaultLinoStorage<TLinkAddress>.DefaultLinoStorage(ILinks<TLinkAddress>)
+  fullName.vb: Platform.Data.Doublets.Lino.DefaultLinoStorage(Of TLinkAddress).DefaultLinoStorage(ILinks(Of TLinkAddress))
+  nameWithType: DefaultLinoStorage<TLinkAddress>.DefaultLinoStorage(ILinks<TLinkAddress>)
+  nameWithType.vb: DefaultLinoStorage(Of TLinkAddress).DefaultLinoStorage(ILinks(Of TLinkAddress))
+- uid: Platform.Data.Doublets.Lino.DefaultLinoStorage`1.#ctor*
+  name: DefaultLinoStorage
+  href: api/Platform.Data.Doublets.Lino.DefaultLinoStorage-1.html#Platform_Data_Doublets_Lino_DefaultLinoStorage_1__ctor_
+  commentId: Overload:Platform.Data.Doublets.Lino.DefaultLinoStorage`1.#ctor
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.DefaultLinoStorage<TLinkAddress>.DefaultLinoStorage
+  fullName.vb: Platform.Data.Doublets.Lino.DefaultLinoStorage(Of TLinkAddress).DefaultLinoStorage
+  nameWithType: DefaultLinoStorage<TLinkAddress>.DefaultLinoStorage
+  nameWithType.vb: DefaultLinoStorage(Of TLinkAddress).DefaultLinoStorage
+- uid: Platform.Data.Doublets.Lino.DefaultLinoStorage`1.CreateLinks(System.Collections.Generic.IList{Platform.Communication.Protocol.Lino.Link})
+  name: CreateLinks(IList<Communication.Protocol.Lino.Link>)
+  href: api/Platform.Data.Doublets.Lino.DefaultLinoStorage-1.html#Platform_Data_Doublets_Lino_DefaultLinoStorage_1_CreateLinks_System_Collections_Generic_IList_Platform_Communication_Protocol_Lino_Link__
+  commentId: M:Platform.Data.Doublets.Lino.DefaultLinoStorage`1.CreateLinks(System.Collections.Generic.IList{Platform.Communication.Protocol.Lino.Link})
+  name.vb: CreateLinks(IList(Of Communication.Protocol.Lino.Link))
+  fullName: Platform.Data.Doublets.Lino.DefaultLinoStorage<TLinkAddress>.CreateLinks(System.Collections.Generic.IList<Platform.Communication.Protocol.Lino.Link>)
+  fullName.vb: Platform.Data.Doublets.Lino.DefaultLinoStorage(Of TLinkAddress).CreateLinks(System.Collections.Generic.IList(Of Platform.Communication.Protocol.Lino.Link))
+  nameWithType: DefaultLinoStorage<TLinkAddress>.CreateLinks(IList<Communication.Protocol.Lino.Link>)
+  nameWithType.vb: DefaultLinoStorage(Of TLinkAddress).CreateLinks(IList(Of Communication.Protocol.Lino.Link))
+- uid: Platform.Data.Doublets.Lino.DefaultLinoStorage`1.CreateLinks*
+  name: CreateLinks
+  href: api/Platform.Data.Doublets.Lino.DefaultLinoStorage-1.html#Platform_Data_Doublets_Lino_DefaultLinoStorage_1_CreateLinks_
+  commentId: Overload:Platform.Data.Doublets.Lino.DefaultLinoStorage`1.CreateLinks
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.DefaultLinoStorage<TLinkAddress>.CreateLinks
+  fullName.vb: Platform.Data.Doublets.Lino.DefaultLinoStorage(Of TLinkAddress).CreateLinks
+  nameWithType: DefaultLinoStorage<TLinkAddress>.CreateLinks
+  nameWithType.vb: DefaultLinoStorage(Of TLinkAddress).CreateLinks
+- uid: Platform.Data.Doublets.Lino.DefaultLinoStorage`1.GetLinks
+  name: GetLinks()
+  href: api/Platform.Data.Doublets.Lino.DefaultLinoStorage-1.html#Platform_Data_Doublets_Lino_DefaultLinoStorage_1_GetLinks
+  commentId: M:Platform.Data.Doublets.Lino.DefaultLinoStorage`1.GetLinks
+  fullName: Platform.Data.Doublets.Lino.DefaultLinoStorage<TLinkAddress>.GetLinks()
+  fullName.vb: Platform.Data.Doublets.Lino.DefaultLinoStorage(Of TLinkAddress).GetLinks()
+  nameWithType: DefaultLinoStorage<TLinkAddress>.GetLinks()
+  nameWithType.vb: DefaultLinoStorage(Of TLinkAddress).GetLinks()
+- uid: Platform.Data.Doublets.Lino.DefaultLinoStorage`1.GetLinks*
+  name: GetLinks
+  href: api/Platform.Data.Doublets.Lino.DefaultLinoStorage-1.html#Platform_Data_Doublets_Lino_DefaultLinoStorage_1_GetLinks_
+  commentId: Overload:Platform.Data.Doublets.Lino.DefaultLinoStorage`1.GetLinks
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.DefaultLinoStorage<TLinkAddress>.GetLinks
+  fullName.vb: Platform.Data.Doublets.Lino.DefaultLinoStorage(Of TLinkAddress).GetLinks
+  nameWithType: DefaultLinoStorage<TLinkAddress>.GetLinks
+  nameWithType.vb: DefaultLinoStorage(Of TLinkAddress).GetLinks
+- uid: Platform.Data.Doublets.Lino.ILinoStorage`1
+  name: ILinoStorage<TLinkAddress>
+  href: api/Platform.Data.Doublets.Lino.ILinoStorage-1.html
+  commentId: T:Platform.Data.Doublets.Lino.ILinoStorage`1
+  name.vb: ILinoStorage(Of TLinkAddress)
+  fullName: Platform.Data.Doublets.Lino.ILinoStorage<TLinkAddress>
+  fullName.vb: Platform.Data.Doublets.Lino.ILinoStorage(Of TLinkAddress)
+  nameWithType: ILinoStorage<TLinkAddress>
+  nameWithType.vb: ILinoStorage(Of TLinkAddress)
+- uid: Platform.Data.Doublets.Lino.ILinoStorage`1.CreateLinks(System.Collections.Generic.IList{Link})
+  name: CreateLinks(IList<Link>)
+  href: api/Platform.Data.Doublets.Lino.ILinoStorage-1.html#Platform_Data_Doublets_Lino_ILinoStorage_1_CreateLinks_System_Collections_Generic_IList_Link__
+  commentId: M:Platform.Data.Doublets.Lino.ILinoStorage`1.CreateLinks(System.Collections.Generic.IList{Link})
+  name.vb: CreateLinks(IList(Of Link))
+  fullName: Platform.Data.Doublets.Lino.ILinoStorage<TLinkAddress>.CreateLinks(System.Collections.Generic.IList<Link>)
+  fullName.vb: Platform.Data.Doublets.Lino.ILinoStorage(Of TLinkAddress).CreateLinks(System.Collections.Generic.IList(Of Link))
+  nameWithType: ILinoStorage<TLinkAddress>.CreateLinks(IList<Link>)
+  nameWithType.vb: ILinoStorage(Of TLinkAddress).CreateLinks(IList(Of Link))
+- uid: Platform.Data.Doublets.Lino.ILinoStorage`1.CreateLinks*
+  name: CreateLinks
+  href: api/Platform.Data.Doublets.Lino.ILinoStorage-1.html#Platform_Data_Doublets_Lino_ILinoStorage_1_CreateLinks_
+  commentId: Overload:Platform.Data.Doublets.Lino.ILinoStorage`1.CreateLinks
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.ILinoStorage<TLinkAddress>.CreateLinks
+  fullName.vb: Platform.Data.Doublets.Lino.ILinoStorage(Of TLinkAddress).CreateLinks
+  nameWithType: ILinoStorage<TLinkAddress>.CreateLinks
+  nameWithType.vb: ILinoStorage(Of TLinkAddress).CreateLinks
+- uid: Platform.Data.Doublets.Lino.ILinoStorage`1.GetLinks
+  name: GetLinks()
+  href: api/Platform.Data.Doublets.Lino.ILinoStorage-1.html#Platform_Data_Doublets_Lino_ILinoStorage_1_GetLinks
+  commentId: M:Platform.Data.Doublets.Lino.ILinoStorage`1.GetLinks
+  fullName: Platform.Data.Doublets.Lino.ILinoStorage<TLinkAddress>.GetLinks()
+  fullName.vb: Platform.Data.Doublets.Lino.ILinoStorage(Of TLinkAddress).GetLinks()
+  nameWithType: ILinoStorage<TLinkAddress>.GetLinks()
+  nameWithType.vb: ILinoStorage(Of TLinkAddress).GetLinks()
+- uid: Platform.Data.Doublets.Lino.ILinoStorage`1.GetLinks*
+  name: GetLinks
+  href: api/Platform.Data.Doublets.Lino.ILinoStorage-1.html#Platform_Data_Doublets_Lino_ILinoStorage_1_GetLinks_
+  commentId: Overload:Platform.Data.Doublets.Lino.ILinoStorage`1.GetLinks
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.ILinoStorage<TLinkAddress>.GetLinks
+  fullName.vb: Platform.Data.Doublets.Lino.ILinoStorage(Of TLinkAddress).GetLinks
+  nameWithType: ILinoStorage<TLinkAddress>.GetLinks
+  nameWithType.vb: ILinoStorage(Of TLinkAddress).GetLinks
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1
+  name: LinoDocumentsStorage<TLinkAddress>
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html
+  commentId: T:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1
+  name.vb: LinoDocumentsStorage(Of TLinkAddress)
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress)
+  nameWithType: LinoDocumentsStorage<TLinkAddress>
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress)
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.#ctor(ILinks{`0},IConverter{System.Collections.Generic.IList{`0},`0})
+  name: LinoDocumentsStorage(ILinks<TLinkAddress>, IConverter<IList<TLinkAddress>, TLinkAddress>)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1__ctor_ILinks__0__IConverter_System_Collections_Generic_IList__0___0__
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.#ctor(ILinks{`0},IConverter{System.Collections.Generic.IList{`0},`0})
+  name.vb: LinoDocumentsStorage(ILinks(Of TLinkAddress), IConverter(Of IList(Of TLinkAddress), TLinkAddress))
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.LinoDocumentsStorage(ILinks<TLinkAddress>, IConverter<System.Collections.Generic.IList<TLinkAddress>, TLinkAddress>)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).LinoDocumentsStorage(ILinks(Of TLinkAddress), IConverter(Of System.Collections.Generic.IList(Of TLinkAddress), TLinkAddress))
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.LinoDocumentsStorage(ILinks<TLinkAddress>, IConverter<IList<TLinkAddress>, TLinkAddress>)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).LinoDocumentsStorage(ILinks(Of TLinkAddress), IConverter(Of IList(Of TLinkAddress), TLinkAddress))
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.#ctor*
+  name: LinoDocumentsStorage
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1__ctor_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.#ctor
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.LinoDocumentsStorage
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).LinoDocumentsStorage
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.LinoDocumentsStorage
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).LinoDocumentsStorage
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.AddressToNumberConverter
+  name: AddressToNumberConverter
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_AddressToNumberConverter
+  commentId: F:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.AddressToNumberConverter
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.AddressToNumberConverter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).AddressToNumberConverter
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.AddressToNumberConverter
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).AddressToNumberConverter
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.BigIntegerToRawNumberSequenceConverter
+  name: BigIntegerToRawNumberSequenceConverter
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_BigIntegerToRawNumberSequenceConverter
+  commentId: F:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.BigIntegerToRawNumberSequenceConverter
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.BigIntegerToRawNumberSequenceConverter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).BigIntegerToRawNumberSequenceConverter
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.BigIntegerToRawNumberSequenceConverter
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).BigIntegerToRawNumberSequenceConverter
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateLink(Platform.Communication.Protocol.Lino.Link)
+  name: CreateLink(Communication.Protocol.Lino.Link)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_CreateLink_Platform_Communication_Protocol_Lino_Link_
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateLink(Platform.Communication.Protocol.Lino.Link)
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.CreateLink(Platform.Communication.Protocol.Lino.Link)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).CreateLink(Platform.Communication.Protocol.Lino.Link)
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.CreateLink(Communication.Protocol.Lino.Link)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).CreateLink(Communication.Protocol.Lino.Link)
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateLink*
+  name: CreateLink
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_CreateLink_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateLink
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.CreateLink
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).CreateLink
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.CreateLink
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).CreateLink
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateLinks(System.Collections.Generic.IList{Platform.Communication.Protocol.Lino.Link})
+  name: CreateLinks(IList<Communication.Protocol.Lino.Link>)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_CreateLinks_System_Collections_Generic_IList_Platform_Communication_Protocol_Lino_Link__
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateLinks(System.Collections.Generic.IList{Platform.Communication.Protocol.Lino.Link})
+  name.vb: CreateLinks(IList(Of Communication.Protocol.Lino.Link))
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.CreateLinks(System.Collections.Generic.IList<Platform.Communication.Protocol.Lino.Link>)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).CreateLinks(System.Collections.Generic.IList(Of Platform.Communication.Protocol.Lino.Link))
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.CreateLinks(IList<Communication.Protocol.Lino.Link>)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).CreateLinks(IList(Of Communication.Protocol.Lino.Link))
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateLinks*
+  name: CreateLinks
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_CreateLinks_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateLinks
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.CreateLinks
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).CreateLinks
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.CreateLinks
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).CreateLinks
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateValuesSequence(Platform.Communication.Protocol.Lino.Link)
+  name: CreateValuesSequence(Communication.Protocol.Lino.Link)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_CreateValuesSequence_Platform_Communication_Protocol_Lino_Link_
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateValuesSequence(Platform.Communication.Protocol.Lino.Link)
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.CreateValuesSequence(Platform.Communication.Protocol.Lino.Link)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).CreateValuesSequence(Platform.Communication.Protocol.Lino.Link)
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.CreateValuesSequence(Communication.Protocol.Lino.Link)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).CreateValuesSequence(Communication.Protocol.Lino.Link)
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateValuesSequence*
+  name: CreateValuesSequence
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_CreateValuesSequence_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.CreateValuesSequence
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.CreateValuesSequence
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).CreateValuesSequence
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.CreateValuesSequence
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).CreateValuesSequence
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.DecimalToRationalConverter
+  name: DecimalToRationalConverter
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_DecimalToRationalConverter
+  commentId: F:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.DecimalToRationalConverter
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.DecimalToRationalConverter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).DecimalToRationalConverter
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.DecimalToRationalConverter
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).DecimalToRationalConverter
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.DefaultSequenceAppender
+  name: DefaultSequenceAppender
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_DefaultSequenceAppender
+  commentId: F:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.DefaultSequenceAppender
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.DefaultSequenceAppender
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).DefaultSequenceAppender
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.DefaultSequenceAppender
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).DefaultSequenceAppender
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.DefaultSequenceRightHeightProvider
+  name: DefaultSequenceRightHeightProvider
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_DefaultSequenceRightHeightProvider
+  commentId: F:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.DefaultSequenceRightHeightProvider
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.DefaultSequenceRightHeightProvider
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).DefaultSequenceRightHeightProvider
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.DefaultSequenceRightHeightProvider
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).DefaultSequenceRightHeightProvider
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.DocumentMarker
+  name: DocumentMarker
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_DocumentMarker
+  commentId: P:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.DocumentMarker
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.DocumentMarker
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).DocumentMarker
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.DocumentMarker
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).DocumentMarker
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.DocumentMarker*
+  name: DocumentMarker
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_DocumentMarker_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.DocumentMarker
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.DocumentMarker
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).DocumentMarker
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.DocumentMarker
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).DocumentMarker
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetLink(`0)
+  name: GetLink(TLinkAddress)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_GetLink__0_
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetLink(`0)
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.GetLink(TLinkAddress)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).GetLink(TLinkAddress)
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.GetLink(TLinkAddress)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).GetLink(TLinkAddress)
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetLink(System.Collections.Generic.IList{`0})
+  name: GetLink(IList<TLinkAddress>)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_GetLink_System_Collections_Generic_IList__0__
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetLink(System.Collections.Generic.IList{`0})
+  name.vb: GetLink(IList(Of TLinkAddress))
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.GetLink(System.Collections.Generic.IList<TLinkAddress>)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).GetLink(System.Collections.Generic.IList(Of TLinkAddress))
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.GetLink(IList<TLinkAddress>)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).GetLink(IList(Of TLinkAddress))
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetLink*
+  name: GetLink
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_GetLink_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetLink
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.GetLink
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).GetLink
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.GetLink
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).GetLink
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetLinks
+  name: GetLinks()
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_GetLinks
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetLinks
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.GetLinks()
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).GetLinks()
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.GetLinks()
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).GetLinks()
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetLinks*
+  name: GetLinks
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_GetLinks_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetLinks
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.GetLinks
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).GetLinks
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.GetLinks
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).GetLinks
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetOrCreateReferenceLink(System.String)
+  name: GetOrCreateReferenceLink(String)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_GetOrCreateReferenceLink_System_String_
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetOrCreateReferenceLink(System.String)
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.GetOrCreateReferenceLink(System.String)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).GetOrCreateReferenceLink(System.String)
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.GetOrCreateReferenceLink(String)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).GetOrCreateReferenceLink(String)
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetOrCreateReferenceLink*
+  name: GetOrCreateReferenceLink
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_GetOrCreateReferenceLink_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.GetOrCreateReferenceLink
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.GetOrCreateReferenceLink
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).GetOrCreateReferenceLink
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.GetOrCreateReferenceLink
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).GetOrCreateReferenceLink
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.IsReference(`0)
+  name: IsReference(TLinkAddress)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_IsReference__0_
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.IsReference(`0)
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.IsReference(TLinkAddress)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).IsReference(TLinkAddress)
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.IsReference(TLinkAddress)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).IsReference(TLinkAddress)
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.IsReference(System.Collections.Generic.IList{`0})
+  name: IsReference(IList<TLinkAddress>)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_IsReference_System_Collections_Generic_IList__0__
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.IsReference(System.Collections.Generic.IList{`0})
+  name.vb: IsReference(IList(Of TLinkAddress))
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.IsReference(System.Collections.Generic.IList<TLinkAddress>)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).IsReference(System.Collections.Generic.IList(Of TLinkAddress))
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.IsReference(IList<TLinkAddress>)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).IsReference(IList(Of TLinkAddress))
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.IsReference*
+  name: IsReference
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_IsReference_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.IsReference
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.IsReference
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).IsReference
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.IsReference
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).IsReference
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.LinkMarker
+  name: LinkMarker
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_LinkMarker
+  commentId: P:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.LinkMarker
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.LinkMarker
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).LinkMarker
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.LinkMarker
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).LinkMarker
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.LinkMarker*
+  name: LinkMarker
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_LinkMarker_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.LinkMarker
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.LinkMarker
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).LinkMarker
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.LinkMarker
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).LinkMarker
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.NumberToAddressConverter
+  name: NumberToAddressConverter
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_NumberToAddressConverter
+  commentId: F:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.NumberToAddressConverter
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.NumberToAddressConverter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).NumberToAddressConverter
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.NumberToAddressConverter
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).NumberToAddressConverter
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.RationalToDecimalConverter
+  name: RationalToDecimalConverter
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_RationalToDecimalConverter
+  commentId: F:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.RationalToDecimalConverter
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.RationalToDecimalConverter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).RationalToDecimalConverter
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.RationalToDecimalConverter
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).RationalToDecimalConverter
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.RawNumberSequenceToBigIntegerConverter
+  name: RawNumberSequenceToBigIntegerConverter
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_RawNumberSequenceToBigIntegerConverter
+  commentId: F:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.RawNumberSequenceToBigIntegerConverter
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.RawNumberSequenceToBigIntegerConverter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).RawNumberSequenceToBigIntegerConverter
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.RawNumberSequenceToBigIntegerConverter
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).RawNumberSequenceToBigIntegerConverter
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.ReadReference(`0)
+  name: ReadReference(TLinkAddress)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_ReadReference__0_
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.ReadReference(`0)
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.ReadReference(TLinkAddress)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).ReadReference(TLinkAddress)
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.ReadReference(TLinkAddress)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).ReadReference(TLinkAddress)
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.ReadReference(System.Collections.Generic.IList{`0})
+  name: ReadReference(IList<TLinkAddress>)
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_ReadReference_System_Collections_Generic_IList__0__
+  commentId: M:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.ReadReference(System.Collections.Generic.IList{`0})
+  name.vb: ReadReference(IList(Of TLinkAddress))
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.ReadReference(System.Collections.Generic.IList<TLinkAddress>)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).ReadReference(System.Collections.Generic.IList(Of TLinkAddress))
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.ReadReference(IList<TLinkAddress>)
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).ReadReference(IList(Of TLinkAddress))
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.ReadReference*
+  name: ReadReference
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_ReadReference_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.ReadReference
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.ReadReference
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).ReadReference
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.ReadReference
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).ReadReference
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.ReferenceMarker
+  name: ReferenceMarker
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_ReferenceMarker
+  commentId: P:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.ReferenceMarker
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.ReferenceMarker
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).ReferenceMarker
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.ReferenceMarker
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).ReferenceMarker
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.ReferenceMarker*
+  name: ReferenceMarker
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_ReferenceMarker_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.ReferenceMarker
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.ReferenceMarker
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).ReferenceMarker
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.ReferenceMarker
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).ReferenceMarker
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.Storage
+  name: Storage
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_Storage
+  commentId: P:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.Storage
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.Storage
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).Storage
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.Storage
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).Storage
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.Storage*
+  name: Storage
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_Storage_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.Storage
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.Storage
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).Storage
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.Storage
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).Storage
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.StringToUnicodeSequenceConverter
+  name: StringToUnicodeSequenceConverter
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_StringToUnicodeSequenceConverter
+  commentId: P:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.StringToUnicodeSequenceConverter
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.StringToUnicodeSequenceConverter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).StringToUnicodeSequenceConverter
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.StringToUnicodeSequenceConverter
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).StringToUnicodeSequenceConverter
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.StringToUnicodeSequenceConverter*
+  name: StringToUnicodeSequenceConverter
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_StringToUnicodeSequenceConverter_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.StringToUnicodeSequenceConverter
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.StringToUnicodeSequenceConverter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).StringToUnicodeSequenceConverter
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.StringToUnicodeSequenceConverter
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).StringToUnicodeSequenceConverter
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.UnicodeSequenceToStringConverter
+  name: UnicodeSequenceToStringConverter
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_UnicodeSequenceToStringConverter
+  commentId: P:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.UnicodeSequenceToStringConverter
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.UnicodeSequenceToStringConverter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).UnicodeSequenceToStringConverter
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.UnicodeSequenceToStringConverter
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).UnicodeSequenceToStringConverter
+- uid: Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.UnicodeSequenceToStringConverter*
+  name: UnicodeSequenceToStringConverter
+  href: api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html#Platform_Data_Doublets_Lino_LinoDocumentsStorage_1_UnicodeSequenceToStringConverter_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoDocumentsStorage`1.UnicodeSequenceToStringConverter
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoDocumentsStorage<TLinkAddress>.UnicodeSequenceToStringConverter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoDocumentsStorage(Of TLinkAddress).UnicodeSequenceToStringConverter
+  nameWithType: LinoDocumentsStorage<TLinkAddress>.UnicodeSequenceToStringConverter
+  nameWithType.vb: LinoDocumentsStorage(Of TLinkAddress).UnicodeSequenceToStringConverter
+- uid: Platform.Data.Doublets.Lino.LinoExporter`1
+  name: LinoExporter<TLinkAddress>
+  href: api/Platform.Data.Doublets.Lino.LinoExporter-1.html
+  commentId: T:Platform.Data.Doublets.Lino.LinoExporter`1
+  name.vb: LinoExporter(Of TLinkAddress)
+  fullName: Platform.Data.Doublets.Lino.LinoExporter<TLinkAddress>
+  fullName.vb: Platform.Data.Doublets.Lino.LinoExporter(Of TLinkAddress)
+  nameWithType: LinoExporter<TLinkAddress>
+  nameWithType.vb: LinoExporter(Of TLinkAddress)
+- uid: Platform.Data.Doublets.Lino.LinoExporter`1.#ctor(Platform.Data.Doublets.Lino.ILinoStorage{`0})
+  name: LinoExporter(ILinoStorage<TLinkAddress>)
+  href: api/Platform.Data.Doublets.Lino.LinoExporter-1.html#Platform_Data_Doublets_Lino_LinoExporter_1__ctor_Platform_Data_Doublets_Lino_ILinoStorage__0__
+  commentId: M:Platform.Data.Doublets.Lino.LinoExporter`1.#ctor(Platform.Data.Doublets.Lino.ILinoStorage{`0})
+  name.vb: LinoExporter(ILinoStorage(Of TLinkAddress))
+  fullName: Platform.Data.Doublets.Lino.LinoExporter<TLinkAddress>.LinoExporter(Platform.Data.Doublets.Lino.ILinoStorage<TLinkAddress>)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoExporter(Of TLinkAddress).LinoExporter(Platform.Data.Doublets.Lino.ILinoStorage(Of TLinkAddress))
+  nameWithType: LinoExporter<TLinkAddress>.LinoExporter(ILinoStorage<TLinkAddress>)
+  nameWithType.vb: LinoExporter(Of TLinkAddress).LinoExporter(ILinoStorage(Of TLinkAddress))
+- uid: Platform.Data.Doublets.Lino.LinoExporter`1.#ctor*
+  name: LinoExporter
+  href: api/Platform.Data.Doublets.Lino.LinoExporter-1.html#Platform_Data_Doublets_Lino_LinoExporter_1__ctor_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoExporter`1.#ctor
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoExporter<TLinkAddress>.LinoExporter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoExporter(Of TLinkAddress).LinoExporter
+  nameWithType: LinoExporter<TLinkAddress>.LinoExporter
+  nameWithType.vb: LinoExporter(Of TLinkAddress).LinoExporter
+- uid: Platform.Data.Doublets.Lino.LinoExporter`1.GetAllLinks
+  name: GetAllLinks()
+  href: api/Platform.Data.Doublets.Lino.LinoExporter-1.html#Platform_Data_Doublets_Lino_LinoExporter_1_GetAllLinks
+  commentId: M:Platform.Data.Doublets.Lino.LinoExporter`1.GetAllLinks
+  fullName: Platform.Data.Doublets.Lino.LinoExporter<TLinkAddress>.GetAllLinks()
+  fullName.vb: Platform.Data.Doublets.Lino.LinoExporter(Of TLinkAddress).GetAllLinks()
+  nameWithType: LinoExporter<TLinkAddress>.GetAllLinks()
+  nameWithType.vb: LinoExporter(Of TLinkAddress).GetAllLinks()
+- uid: Platform.Data.Doublets.Lino.LinoExporter`1.GetAllLinks*
+  name: GetAllLinks
+  href: api/Platform.Data.Doublets.Lino.LinoExporter-1.html#Platform_Data_Doublets_Lino_LinoExporter_1_GetAllLinks_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoExporter`1.GetAllLinks
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoExporter<TLinkAddress>.GetAllLinks
+  fullName.vb: Platform.Data.Doublets.Lino.LinoExporter(Of TLinkAddress).GetAllLinks
+  nameWithType: LinoExporter<TLinkAddress>.GetAllLinks
+  nameWithType.vb: LinoExporter(Of TLinkAddress).GetAllLinks
+- uid: Platform.Data.Doublets.Lino.LinoImporter`1
+  name: LinoImporter<TLinkAddress>
+  href: api/Platform.Data.Doublets.Lino.LinoImporter-1.html
+  commentId: T:Platform.Data.Doublets.Lino.LinoImporter`1
+  name.vb: LinoImporter(Of TLinkAddress)
+  fullName: Platform.Data.Doublets.Lino.LinoImporter<TLinkAddress>
+  fullName.vb: Platform.Data.Doublets.Lino.LinoImporter(Of TLinkAddress)
+  nameWithType: LinoImporter<TLinkAddress>
+  nameWithType.vb: LinoImporter(Of TLinkAddress)
+- uid: Platform.Data.Doublets.Lino.LinoImporter`1.#ctor(Platform.Data.Doublets.Lino.ILinoStorage{`0})
+  name: LinoImporter(ILinoStorage<TLinkAddress>)
+  href: api/Platform.Data.Doublets.Lino.LinoImporter-1.html#Platform_Data_Doublets_Lino_LinoImporter_1__ctor_Platform_Data_Doublets_Lino_ILinoStorage__0__
+  commentId: M:Platform.Data.Doublets.Lino.LinoImporter`1.#ctor(Platform.Data.Doublets.Lino.ILinoStorage{`0})
+  name.vb: LinoImporter(ILinoStorage(Of TLinkAddress))
+  fullName: Platform.Data.Doublets.Lino.LinoImporter<TLinkAddress>.LinoImporter(Platform.Data.Doublets.Lino.ILinoStorage<TLinkAddress>)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoImporter(Of TLinkAddress).LinoImporter(Platform.Data.Doublets.Lino.ILinoStorage(Of TLinkAddress))
+  nameWithType: LinoImporter<TLinkAddress>.LinoImporter(ILinoStorage<TLinkAddress>)
+  nameWithType.vb: LinoImporter(Of TLinkAddress).LinoImporter(ILinoStorage(Of TLinkAddress))
+- uid: Platform.Data.Doublets.Lino.LinoImporter`1.#ctor*
+  name: LinoImporter
+  href: api/Platform.Data.Doublets.Lino.LinoImporter-1.html#Platform_Data_Doublets_Lino_LinoImporter_1__ctor_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoImporter`1.#ctor
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoImporter<TLinkAddress>.LinoImporter
+  fullName.vb: Platform.Data.Doublets.Lino.LinoImporter(Of TLinkAddress).LinoImporter
+  nameWithType: LinoImporter<TLinkAddress>.LinoImporter
+  nameWithType.vb: LinoImporter(Of TLinkAddress).LinoImporter
+- uid: Platform.Data.Doublets.Lino.LinoImporter`1.Import(System.String)
+  name: Import(String)
+  href: api/Platform.Data.Doublets.Lino.LinoImporter-1.html#Platform_Data_Doublets_Lino_LinoImporter_1_Import_System_String_
+  commentId: M:Platform.Data.Doublets.Lino.LinoImporter`1.Import(System.String)
+  fullName: Platform.Data.Doublets.Lino.LinoImporter<TLinkAddress>.Import(System.String)
+  fullName.vb: Platform.Data.Doublets.Lino.LinoImporter(Of TLinkAddress).Import(System.String)
+  nameWithType: LinoImporter<TLinkAddress>.Import(String)
+  nameWithType.vb: LinoImporter(Of TLinkAddress).Import(String)
+- uid: Platform.Data.Doublets.Lino.LinoImporter`1.Import*
+  name: Import
+  href: api/Platform.Data.Doublets.Lino.LinoImporter-1.html#Platform_Data_Doublets_Lino_LinoImporter_1_Import_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoImporter`1.Import
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoImporter<TLinkAddress>.Import
+  fullName.vb: Platform.Data.Doublets.Lino.LinoImporter(Of TLinkAddress).Import
+  nameWithType: LinoImporter<TLinkAddress>.Import
+  nameWithType.vb: LinoImporter(Of TLinkAddress).Import
