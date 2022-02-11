@@ -19,7 +19,7 @@ public class ImporterAndExporterTests
     public static ILinks<TLinkAddress> CreateLinks(string dbFilename)
     {
         var linksConstants = new LinksConstants<TLinkAddress>(enableExternalReferencesSupport: true);
-        return new UnitedMemoryLinks<TLinkAddress>(new FileMappedResizableDirectMemory(dbFilename), UnitedMemoryLinks<TLinkAddress>.DefaultLinksSizeStep, linksConstants, IndexTreeType.Default);
+        return new UnitedMemoryLinks<TLinkAddress>(new HeapResizableDirectMemory(), UnitedMemoryLinks<TLinkAddress>.DefaultLinksSizeStep, linksConstants, IndexTreeType.Default);
     }
 
     // [InlineData("(1: 1 1)")]
@@ -54,14 +54,8 @@ public class ImporterAndExporterTests
 
     [InlineData("(1: 1 1)")]
     [InlineData("(1: 1 1)\n(2: 2 2)")]
-    [InlineData("(2: 2 2)")]
     [InlineData("(1: 2 2)")]
     [InlineData("(1: 2 2)\n(2: 1 1)")]
-    [InlineData("(1: 2 (3: 3 3))")]
-    [InlineData("(1: 2 (3: 3 3))\n(2: 1 1)")]
-    [InlineData("son lovesMama")]
-    [InlineData("papa (lovesMama: loves mama)")]
-    [InlineData("papa (lovesMama: loves mama)\nson lovesMama\ndaughter lovesMama\nall (love mama)")]
     [Theory]
     public void LinoStorageTest(string notation)
     {
@@ -81,9 +75,9 @@ public class ImporterAndExporterTests
     [InlineData("(1: 2 2)\n(2: 1 1)")]
     [InlineData("(1: 2 (3: 3 3))")]
     [InlineData("(1: 2 (3: 3 3))\n(2: 1 1)")]
-    [InlineData("son lovesMama")]
-    [InlineData("papa (lovesMama: loves mama)")]
-    [InlineData("papa (lovesMama: loves mama)\nson lovesMama\ndaughter lovesMama\nall (love mama)")]
+    [InlineData("(son: lovesMama)")]
+    [InlineData("(papa: (lovesMama: loves mama))")]
+    [InlineData("(papa: (lovesMama: loves mama) son lovesMama daughter lovesMama all (love: mama))")]
     [Theory]
     public void LinoDocumentStorageTest(string notation)
     {
@@ -91,8 +85,6 @@ public class ImporterAndExporterTests
         var linoStorage = new LinoDocumentsStorage<TLinkAddress>(storage, new BalancedVariantConverter<ulong>(storage));
         var importer = new LinoImporter<TLinkAddress>(linoStorage);
         importer.Import(notation);
-        var anotherLinoStorage = new DefaultLinoStorage<TLinkAddress>(storage);
-        // var exporter = new LinoExporter<TLinkAddress>(anotherLinoStorage);
         var exporter = new LinoExporter<TLinkAddress>(linoStorage);
         var exportedLinks = exporter.GetAllLinks();
         Assert.Equal(notation, exportedLinks);
