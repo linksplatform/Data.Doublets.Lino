@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.DefaultLinoStorage-1.html",
-          "hash": "kYbzm1xbZlu4sKkLQz2Hlw=="
+          "hash": "S+U4BzcXtECHupSJbWaDMQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.ILinoStorage-1.html",
-          "hash": "BSom08poPqOxCR6sWWdwMQ=="
+          "hash": "C2K3zzGXDmja+NB5xQBKTw=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html",
-          "hash": "X9vXBAahRuvR79mGqRDGuw=="
+          "hash": "yjCA3tywl4cEzVd/7vIZzQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoExporter-1.html",
-          "hash": "2mWFSNbqDugx0Bixkp0mow=="
+          "hash": "i4anwiMFNP28b7vFQzStbg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoImporter-1.html",
-          "hash": "xJgLtIJ08H6sDuMvCOASsQ=="
+          "hash": "yIY2gGGoQjIvMxr80UjGDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Data.Doublets.Lino.LinoImporterCli-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Data.Doublets.Lino.LinoImporterCli-1.html",
+          "hash": "sDSlNVMj+jLpSGNP1MGniw=="
         }
       },
       "is_incremental": false,
@@ -90,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.html",
-          "hash": "nSXeCU/CKOgAkwlYy8atjg=="
+          "hash": "g7hfuPDNXMaGtj/VIw0DeQ=="
         }
       },
       "is_incremental": false,
@@ -102,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "8fBEUetZ6UKX0QdCqpggHQ=="
+          "hash": "9IoKMBID/8xql1vZ8qJThA=="
         }
       },
       "is_incremental": false,
@@ -144,7 +156,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 6,
+          "total_file_count": 7,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
