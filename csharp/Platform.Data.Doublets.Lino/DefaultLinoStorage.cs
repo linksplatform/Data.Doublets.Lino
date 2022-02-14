@@ -4,7 +4,7 @@ using LinoLink = Platform.Communication.Protocol.Lino.Link;
 
 namespace Platform.Data.Doublets.Lino;
 
-public class DefaultLinoStorage<TLinkAddress> : ILinoStorage<TLinkAddress> where TLinkAddress : struct
+public class DefaultLinoStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
 {
     private readonly ILinks<TLinkAddress> _storage;
 
