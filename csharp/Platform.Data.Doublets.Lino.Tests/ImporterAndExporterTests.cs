@@ -77,7 +77,10 @@ public class ImporterAndExporterTests
     [InlineData("(1: 2 (3: 3 3))\n(2: 1 1)")]
     [InlineData("(son: lovesMama)")]
     [InlineData("(papa: (lovesMama: loves mama))")]
-    [InlineData("(papa: (lovesMama: loves mama) son lovesMama daughter lovesMama all (love: mama))")]
+    [InlineData(@"(papa: (lovesMama: loves mama)
+                son lovesMama
+                daughter lovesMama
+                all (love: mama))")]
     [Theory]
     public void LinoDocumentStorageTest(string notation)
     {

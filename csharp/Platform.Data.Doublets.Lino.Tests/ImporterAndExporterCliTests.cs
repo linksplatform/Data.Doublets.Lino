@@ -34,7 +34,10 @@ public class ImporterAndExporterCliTests
     [InlineData("(1: 2 (3: 3 3))\n(2: 1 1)")]
     [InlineData("(son: lovesMama)")]
     [InlineData("(papa: (lovesMama: loves mama))")]
-    [InlineData("(papa: (lovesMama: loves mama) son lovesMama daughter lovesMama all (love: mama))")]
+    [InlineData(@"(papa: (lovesMama: loves mama)
+                son lovesMama
+                daughter lovesMama
+                all (love: mama))")]
     public void LinoDocumentsStorageTest(string notation)
     {
         var notationFilePath = TemporaryFiles.UseNew();
