@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.DefaultLinoStorage-1.html",
-          "hash": "S+U4BzcXtECHupSJbWaDMQ=="
+          "hash": "dmFPLK6BSIwTH8Kb96PwyQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.ILinoStorage-1.html",
-          "hash": "C2K3zzGXDmja+NB5xQBKTw=="
+          "hash": "/ZnRdNqzcPFHqwAygWCDmA=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html",
-          "hash": "yjCA3tywl4cEzVd/7vIZzQ=="
+          "hash": "x+9ATcxPMlSDEY+NTwajSA=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoExporter-1.html",
-          "hash": "i4anwiMFNP28b7vFQzStbg=="
+          "hash": "5SYxO7QsY/xITmytW+VeTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.Data.Doublets.Lino.LinoExporterCli-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.Data.Doublets.Lino.LinoExporterCli-1.html",
+          "hash": "Ct3z6n0Y0dBlWNUa3Vcriw=="
         }
       },
       "is_incremental": false,
@@ -78,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoImporter-1.html",
-          "hash": "yIY2gGGoQjIvMxr80UjGDw=="
+          "hash": "EckcsQDclg7EpkF47M8LLA=="
         }
       },
       "is_incremental": false,
@@ -90,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoImporterCli-1.html",
-          "hash": "sDSlNVMj+jLpSGNP1MGniw=="
+          "hash": "PZCq4HTCf1656ci5OLwOHg=="
         }
       },
       "is_incremental": false,
@@ -102,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.html",
-          "hash": "g7hfuPDNXMaGtj/VIw0DeQ=="
+          "hash": "bgOLvYLxJXpCsSwY6kUMew=="
         }
       },
       "is_incremental": false,
@@ -114,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "9IoKMBID/8xql1vZ8qJThA=="
+          "hash": "uRTmtqFn6ExeVlTSVSYHag=="
         }
       },
       "is_incremental": false,
@@ -156,7 +168,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 7,
+          "total_file_count": 8,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

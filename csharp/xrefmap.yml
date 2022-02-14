@@ -531,6 +531,33 @@ references:
   fullName.vb: Platform.Data.Doublets.Lino.LinoExporter(Of TLinkAddress).GetAllLinks
   nameWithType: LinoExporter<TLinkAddress>.GetAllLinks
   nameWithType.vb: LinoExporter(Of TLinkAddress).GetAllLinks
+- uid: Platform.Data.Doublets.Lino.LinoExporterCli`1
+  name: LinoExporterCli<TLinkAddress>
+  href: api/Platform.Data.Doublets.Lino.LinoExporterCli-1.html
+  commentId: T:Platform.Data.Doublets.Lino.LinoExporterCli`1
+  name.vb: LinoExporterCli(Of TLinkAddress)
+  fullName: Platform.Data.Doublets.Lino.LinoExporterCli<TLinkAddress>
+  fullName.vb: Platform.Data.Doublets.Lino.LinoExporterCli(Of TLinkAddress)
+  nameWithType: LinoExporterCli<TLinkAddress>
+  nameWithType.vb: LinoExporterCli(Of TLinkAddress)
+- uid: Platform.Data.Doublets.Lino.LinoExporterCli`1.Run(System.String[])
+  name: Run(String[])
+  href: api/Platform.Data.Doublets.Lino.LinoExporterCli-1.html#Platform_Data_Doublets_Lino_LinoExporterCli_1_Run_System_String___
+  commentId: M:Platform.Data.Doublets.Lino.LinoExporterCli`1.Run(System.String[])
+  name.vb: Run(String())
+  fullName: Platform.Data.Doublets.Lino.LinoExporterCli<TLinkAddress>.Run(System.String[])
+  fullName.vb: Platform.Data.Doublets.Lino.LinoExporterCli(Of TLinkAddress).Run(System.String())
+  nameWithType: LinoExporterCli<TLinkAddress>.Run(String[])
+  nameWithType.vb: LinoExporterCli(Of TLinkAddress).Run(String())
+- uid: Platform.Data.Doublets.Lino.LinoExporterCli`1.Run*
+  name: Run
+  href: api/Platform.Data.Doublets.Lino.LinoExporterCli-1.html#Platform_Data_Doublets_Lino_LinoExporterCli_1_Run_
+  commentId: Overload:Platform.Data.Doublets.Lino.LinoExporterCli`1.Run
+  isSpec: "True"
+  fullName: Platform.Data.Doublets.Lino.LinoExporterCli<TLinkAddress>.Run
+  fullName.vb: Platform.Data.Doublets.Lino.LinoExporterCli(Of TLinkAddress).Run
+  nameWithType: LinoExporterCli<TLinkAddress>.Run
+  nameWithType.vb: LinoExporterCli(Of TLinkAddress).Run
 - uid: Platform.Data.Doublets.Lino.LinoImporter`1
   name: LinoImporter<TLinkAddress>
   href: api/Platform.Data.Doublets.Lino.LinoImporter-1.html
