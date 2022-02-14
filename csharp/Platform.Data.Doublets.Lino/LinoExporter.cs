@@ -3,7 +3,7 @@ using Platform.Communication.Protocol.Lino;
 
 namespace Platform.Data.Doublets.Lino;
 
-public class LinoExporter<TLinkAddress> where TLinkAddress : struct
+public class LinoExporter<TLinkAddress>
 {
     private readonly EqualityComparer<TLinkAddress> _equalityComparer = EqualityComparer<TLinkAddress>.Default;
     private readonly ILinoStorage<TLinkAddress> _linoDocumentsStorage;
