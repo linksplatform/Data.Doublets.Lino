@@ -16,7 +16,7 @@ namespace Platform.Data.Doublets.Lino.Importer
         /// </param>
         static void Main(params string[] args)
         {
-            new JsonImporterCli<TLinkAddress>().Run(args);
+            new LinoImporterCli<TLinkAddress>().Run(args);
         }
     }
 }
