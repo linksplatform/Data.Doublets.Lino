@@ -12,7 +12,7 @@ public class LinoImporterCli<TLinkAddress>
         var argumentsIndex = 0;
         var notationFilePath = ConsoleHelpers.GetOrReadArgument(argumentsIndex++, "A path to a notation file", args);
         var storageFilePath = ConsoleHelpers.GetOrReadArgument(argumentsIndex, "A path to a links storage", args);
-        var linksMemory = new FileMappedResizableDirectMemory(storageFilePath);
+        using var linksMemory = new FileMappedResizableDirectMemory(storageFilePath);
         var links = new UnitedMemoryLinks<TLinkAddress>(linksMemory).DecorateWithAutomaticUniquenessAndUsagesResolution();
         var linoStorage = new DefaultLinoStorage<TLinkAddress>(links);
         var importer = new LinoImporter<TLinkAddress>(linoStorage);
