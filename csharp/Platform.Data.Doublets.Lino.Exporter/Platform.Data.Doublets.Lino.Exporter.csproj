@@ -1,9 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <Description>LinksPlatform's Platform.Data.Doublets.Lino.Exporter CLI tool (links2lino).</Description>
+        <Copyright>FreePhoenix888</Copyright>
+        <AssemblyTitle>Platform.Data.Doublets.Lino.Exporter</AssemblyTitle>
+        <VersionPrefix>0.1.0</VersionPrefix>
+        <Authors>FreePhoenix888</Authors>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <TargetFramework>net6</TargetFramework>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>links2lino</ToolCommandName>
+        <AssemblyName>Platform.Data.Doublets.Lino.Exporter</AssemblyName>
+        <PackageId>links2lino</PackageId>
+        <PackageTags>LinksPlatform;Data;Doublets;Lino;Exporter</PackageTags>
+        <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
+        <PackageProjectUrl>https://linksplatform.github.io/Data.Doublets.Lino.Exporter</PackageProjectUrl>
+        <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>git://github.com/linksplatform/Data.Doublets.Lino</RepositoryUrl>
+        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+        <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
