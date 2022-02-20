@@ -102,7 +102,11 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             return _equalityComparer.Equals(ReferenceMarker, source);
         }
 
-        public TLinkAddress GetOrCreateReference(string content) => Storage.GetOrCreate(ReferenceMarker, StringToUnicodeSequenceConverter.Convert(content));
+        public TLinkAddress GetOrCreateReference(string content)
+        {
+            var sequence = StringToUnicodeSequenceConverter.Convert(content);
+            return Storage.GetOrCreate(ReferenceMarker, sequence);
+        }
 
         public string ReadReference(TLinkAddress reference) => ReadReference(Storage.GetLink(reference));
 
