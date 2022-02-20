@@ -41,5 +41,4 @@ public class DefaultLinoStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
         }
         return linoLinks;
     }
-
 }
