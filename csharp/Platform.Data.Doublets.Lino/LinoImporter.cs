@@ -31,8 +31,8 @@ public class LinoImporter<TLinkAddress>
     // {
     //     var left = parent.Values[0];
     //     var right = parent.Values[1];
-    //     var source = left.Values != null ? Read(left) : _linoDocumentsStorage.GetOrCreateReferenceLink(left.Id);
-    //     var target = right.Values != null ? Read(right) : _linoDocumentsStorage.GetOrCreateReferenceLink(right.Id);
+    //     var source = left.Values != null ? Read(left) : _linoDocumentsStorage.GetOrCreateReference(left.Id);
+    //     var target = right.Values != null ? Read(right) : _linoDocumentsStorage.GetOrCreateReference(right.Id);
     //     return _linoDocumentsStorage.Storage.GetOrCreate(source, target);
     // }
 }
