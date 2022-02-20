@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using Platform.Data.Doublets.Memory.United.Generic;
 using Platform.Data.Doublets.Sequences.Converters;
@@ -17,7 +18,7 @@ public class LinoExporterCli<TLinkAddress> where TLinkAddress : struct
         using var linksMemory = new FileMappedResizableDirectMemory(storageFilePath);
         var storage = new UnitedMemoryLinks<TLinkAddress>(linksMemory).DecorateWithAutomaticUniquenessAndUsagesResolution();
         ILinoStorage<TLinkAddress> linoStorage;
-        if (string.IsNullOrWhiteSpace(documentName))
+        if (String.IsNullOrWhiteSpace(documentName))
         {
             linoStorage = new DefaultLinoStorage<TLinkAddress>(storage);
         }
