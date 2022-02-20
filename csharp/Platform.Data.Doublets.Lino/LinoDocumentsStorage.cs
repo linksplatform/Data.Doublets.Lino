@@ -6,9 +6,7 @@ using Platform.Converters;
 using Platform.Data.Doublets.CriterionMatchers;
 using Platform.Data.Doublets.Numbers.Rational;
 using Platform.Data.Doublets.Numbers.Raw;
-using Platform.Data.Doublets.Sequences;
 using Platform.Data.Doublets.Sequences.Converters;
-using Platform.Data.Doublets.Sequences.HeightProviders;
 using Platform.Data.Doublets.Sequences.Walkers;
 using Platform.Data.Doublets.Unicode;
 using Platform.Data.Numbers.Raw;
@@ -17,60 +15,47 @@ using LinoLink = Platform.Communication.Protocol.Lino.Link;
 
 namespace Platform.Data.Doublets.Lino;
 
-public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> where TLinkAddress : struct
+public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
 {
-        private readonly TLinkAddress _any;
-        private static readonly TLinkAddress Zero = default;
+        private static readonly TLinkAddress Zero = default!;
         private static readonly TLinkAddress One = Arithmetic.Increment(Zero);
 
-        // public readonly IConverter<IList<TLinkAddress>?, TLinkAddress> ListToSequenceConverter;
-        private readonly TLinkAddress MeaningRoot;
         private readonly EqualityComparer<TLinkAddress> _equalityComparer = EqualityComparer<TLinkAddress>.Default;
         // Converters that are able to convert link's address (UInt64 value) to a raw number represented with another UInt64 value and back
-        public readonly RawNumberToAddressConverter<TLinkAddress> NumberToAddressConverter = new();
-        public readonly AddressToRawNumberConverter<TLinkAddress> AddressToNumberConverter = new();
-        // Converters between BigInteger and raw number sequence
-        public readonly BigIntegerToRawNumberSequenceConverter<TLinkAddress> BigIntegerToRawNumberSequenceConverter;
-        public readonly RawNumberSequenceToBigIntegerConverter<TLinkAddress> RawNumberSequenceToBigIntegerConverter;
-        // Converters between decimal and rational number sequence
-        public readonly DecimalToRationalConverter<TLinkAddress> DecimalToRationalConverter;
-        public readonly RationalToDecimalConverter<TLinkAddress> RationalToDecimalConverter;
-        public readonly DefaultSequenceRightHeightProvider<TLinkAddress> DefaultSequenceRightHeightProvider;
-        public readonly DefaultSequenceAppender<TLinkAddress> DefaultSequenceAppender;
-        public ILinks<TLinkAddress> Storage { get; }
+        private readonly RawNumberToAddressConverter<TLinkAddress> _numberToAddressConverter = new();
+        private readonly AddressToRawNumberConverter<TLinkAddress> _addressToNumberConverter = new();
 
-        public IConverter<string, TLinkAddress> StringToUnicodeSequenceConverter { get; }
-        public IConverter<TLinkAddress, string> UnicodeSequenceToStringConverter { get; }
+        private ILinks<TLinkAddress> Storage { get; }
+
+        private IConverter<string, TLinkAddress> StringToUnicodeSequenceConverter { get; }
+        private IConverter<TLinkAddress, string> UnicodeSequenceToStringConverter { get; }
         public TLinkAddress DocumentMarker { get; }
 
         public TLinkAddress ReferenceMarker { get; }
         public TLinkAddress LinkWithoutIdMarker { get; }
         public TLinkAddress LinkWithIdMarker { get; }
-        private TLinkAddress _markerIndex { get; set; }
 
-        private IConverter<IList<TLinkAddress>?, TLinkAddress> _listToSequenceConverter;
+        private readonly IConverter<IList<TLinkAddress>?, TLinkAddress> _listToSequenceConverter;
 
         public LinoDocumentsStorage(ILinks<TLinkAddress> storage, IConverter<IList<TLinkAddress>?, TLinkAddress> listToSequenceConverter)
         {
             Storage = storage;
-            // ListToSequenceConverter = listToSequenceConverter;
             // Initializes constants
-            _any = storage.Constants.Any;
             var markerIndex = One;
-            MeaningRoot = storage.GetOrCreate(markerIndex, markerIndex);
-            var unicodeSymbolMarker = storage.GetOrCreate(MeaningRoot, Arithmetic.Increment(ref markerIndex));
-            var unicodeSequenceMarker = storage.GetOrCreate(MeaningRoot, Arithmetic.Increment(ref markerIndex));
-            DocumentMarker = storage.GetOrCreate(MeaningRoot, Arithmetic.Increment(ref markerIndex));
-            ReferenceMarker = storage.GetOrCreate(MeaningRoot, Arithmetic.Increment(ref markerIndex));
-            LinkWithoutIdMarker = storage.GetOrCreate(MeaningRoot, Arithmetic.Increment(ref markerIndex));
-            LinkWithIdMarker = storage.GetOrCreate(MeaningRoot, Arithmetic.Increment(ref markerIndex));
+            var meaningRoot = storage.GetOrCreate(markerIndex, markerIndex);
+            var unicodeSymbolMarker = storage.GetOrCreate(meaningRoot, Arithmetic.Increment(ref markerIndex));
+            var unicodeSequenceMarker = storage.GetOrCreate(meaningRoot, Arithmetic.Increment(ref markerIndex));
+            DocumentMarker = storage.GetOrCreate(meaningRoot, Arithmetic.Increment(ref markerIndex));
+            ReferenceMarker = storage.GetOrCreate(meaningRoot, Arithmetic.Increment(ref markerIndex));
+            LinkWithoutIdMarker = storage.GetOrCreate(meaningRoot, Arithmetic.Increment(ref markerIndex));
+            LinkWithIdMarker = storage.GetOrCreate(meaningRoot, Arithmetic.Increment(ref markerIndex));
             BalancedVariantConverter<TLinkAddress> balancedVariantConverter = new(storage);
             TargetMatcher<TLinkAddress> unicodeSymbolCriterionMatcher = new(storage, unicodeSymbolMarker);
             TargetMatcher<TLinkAddress> unicodeSequenceCriterionMatcher = new(storage, unicodeSequenceMarker);
             CharToUnicodeSymbolConverter<TLinkAddress> charToUnicodeSymbolConverter =
-                new(storage, AddressToNumberConverter, unicodeSymbolMarker);
+                new(storage, _addressToNumberConverter, unicodeSymbolMarker);
             UnicodeSymbolToCharConverter<TLinkAddress> unicodeSymbolToCharConverter =
-                new(storage, NumberToAddressConverter, unicodeSymbolCriterionMatcher);
+                new(storage, _numberToAddressConverter, unicodeSymbolCriterionMatcher);
             StringToUnicodeSequenceConverter = new CachingConverterDecorator<string, TLinkAddress>(
                 new StringToUnicodeSequenceConverter<TLinkAddress>(storage, charToUnicodeSymbolConverter,
                     balancedVariantConverter, unicodeSequenceMarker));
@@ -79,8 +64,6 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             UnicodeSequenceToStringConverter = new CachingConverterDecorator<TLinkAddress, string>(
                 new UnicodeSequenceToStringConverter<TLinkAddress>(storage, unicodeSequenceCriterionMatcher, sequenceWalker,
                     unicodeSymbolToCharConverter));
-            DecimalToRationalConverter = new(storage, BigIntegerToRawNumberSequenceConverter);
-            RationalToDecimalConverter = new(storage, RawNumberSequenceToBigIntegerConverter);
             _listToSequenceConverter = listToSequenceConverter;
         }
 
@@ -110,19 +93,26 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
 
         private bool IsReference(TLinkAddress reference)
         {
+            var link = Storage.GetLink(reference);
+            return IsReference(link);
+        }
+
+        private bool IsReference(IList<TLinkAddress> reference)
+        {
             var source = Storage.GetSource(reference);
             return _equalityComparer.Equals(ReferenceMarker, source);
         }
 
-        public TLinkAddress GetOrCreateReference(string content)
+
+        private TLinkAddress GetOrCreateReference(string content)
         {
             var sequence = StringToUnicodeSequenceConverter.Convert(content);
             return Storage.GetOrCreate(ReferenceMarker, sequence);
         }
 
-        public string ReadReference(TLinkAddress reference) => ReadReference(Storage.GetLink(reference));
+        private string ReadReference(TLinkAddress reference) => ReadReference(Storage.GetLink(reference));
 
-        public string ReadReference(IList<TLinkAddress> reference)
+        private string ReadReference(IList<TLinkAddress> reference)
         {
             var referenceLink = new Link<TLinkAddress>(reference);
             if (!_equalityComparer.Equals(ReferenceMarker, referenceLink.Source))
@@ -142,7 +132,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             Storage.GetOrCreate(DocumentMarker, _listToSequenceConverter.Convert(sequenceList));
         }
 
-        public TLinkAddress CreateLink(LinoLink link)
+        private TLinkAddress CreateLink(LinoLink link)
         {
             if (link.Id != null)
             {
@@ -154,7 +144,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
 
         private TLinkAddress CreateLinkWithId(LinoLink link)
         {
-            TLinkAddress currentReference = GetOrCreateReference(link.Id);
+            var currentReference = GetOrCreateReference(link.Id);
             if (link.Values == null)
             {
                 return Storage.GetOrCreate(LinkWithIdMarker, currentReference);
@@ -164,7 +154,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             return Storage.GetOrCreate(LinkWithIdMarker, idWithValues);
         }
 
-        public TLinkAddress CreateValuesSequence(LinoLink parent)
+        private TLinkAddress CreateValuesSequence(LinoLink parent)
         {
             var values = new List<TLinkAddress>(parent.Values.Count);
             for (int i = 0; i < parent.Values.Count; i++)
@@ -202,14 +192,13 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
         public IList<LinoLink> GetLinks()
         {
             var resultLinks = new List<LinoLink>();
-            var any = Storage.Constants.Any;
             bool IsElement(TLinkAddress linkIndex)
             {
                 var source = Storage.GetSource(linkIndex);
                 return _equalityComparer.Equals(LinkWithoutIdMarker, source) |  _equalityComparer.Equals(LinkWithIdMarker, source) || Storage.IsPartialPoint(linkIndex);
             }
             var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsElement);
-            TLinkAddress documentLinksSequence = GetDocumentSequence();
+            var documentLinksSequence = GetDocumentSequence();
             var documentLinks = rightSequenceWalker.Walk(documentLinksSequence);
             foreach (var documentLink in documentLinks)
             {
@@ -218,68 +207,79 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             return resultLinks;
         }
 
+        private bool IsLinkOrReferenceOrPartialPoint(TLinkAddress linkIndex)
+        {
+            var link = Storage.GetLink(linkIndex);
+            return IsLink(link) || IsReference(link) || Storage.IsPartialPoint(linkIndex);
+        }
+
+        private LinoLink GetLinkWithId(IList<TLinkAddress> linkWithId)
+        {
+            string id;
+            var values = new List<LinoLink>();
+            var linkStruct = new Link<TLinkAddress>(linkWithId);
+            if (IsReference(linkStruct.Target))
+            {
+                id = ReadReference(linkStruct.Target);
+                return new LinoLink(id);
+            }
+            var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsLinkOrReferenceOrPartialPoint);
+            using var enumerator = rightSequenceWalker.Walk(linkStruct.Target).GetEnumerator();
+            enumerator.MoveNext();
+            id = ReadReference(enumerator.Current);
+            while (enumerator.MoveNext())
+            {
+                var currentValueStruct = new Link<TLinkAddress>(Storage.GetLink(enumerator.Current));
+                if (IsLink(currentValueStruct))
+                {
+                    var value = GetLink(currentValueStruct);
+                    values.Add(value);
+                }
+                else if (IsReference(currentValueStruct))
+                {
+                    var reference = ReadReference(currentValueStruct);
+                    var currentLinoLink = new LinoLink(reference);
+                    values.Add(currentLinoLink);
+                }
+            }
+            return new LinoLink(id, values);
+        }
+
+        public LinoLink GetLinkWithoutId(IList<TLinkAddress> linkWithoudId)
+        {
+            var values = new List<LinoLink>();
+            var linkStruct = new Link<TLinkAddress>(linkWithoudId);
+            var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsLinkOrReferenceOrPartialPoint);
+            foreach (var currentValue in rightSequenceWalker.Walk(linkStruct.Target))
+            {
+                var currentValueStruct = new Link<TLinkAddress>(Storage.GetLink(currentValue));
+                if (IsLink(currentValue))
+                {
+                    var value = GetLink(currentValueStruct);
+                    values.Add(value);
+                }
+                else if (IsReference(currentValueStruct))
+                {
+                    var currentLinoLink = new LinoLink(ReadReference(currentValueStruct));
+                    values.Add(currentLinoLink);
+                }
+            }
+            return new LinoLink(null, values);
+        }
+
         public LinoLink GetLink(TLinkAddress link) => GetLink(Storage.GetLink(link));
 
         public LinoLink GetLink(IList<TLinkAddress> link)
         {
-            string id = default;
-            var values = new List<LinoLink>();
             var linkStruct = new Link<TLinkAddress>(link);
-            if (!IsLink(linkStruct.Index))
+            if (IsLinkWithId(linkStruct))
             {
-                throw new Exception("The source of the passed link is not the link marker.");
+                return GetLinkWithId(linkStruct);
             }
-            if (IsLinkWithId(linkStruct.Index))
+            if (IsLinkWithoutId(linkStruct))
             {
-                if (IsReference(linkStruct.Target))
-                {
-                    id = ReadReference(linkStruct.Target);
-                    return new LinoLink(id);
-                }
-                var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsElement);
-                using var enumerator = rightSequenceWalker.Walk(linkStruct.Target).GetEnumerator();
-                enumerator.MoveNext();
-                id = ReadReference(enumerator.Current);
-                enumerator.MoveNext();
-                for (var currentValue = enumerator.Current; enumerator.MoveNext(); currentValue = enumerator.Current)
-                {
-                    var currentValueStruct = new Link<TLinkAddress>(Storage.GetLink(currentValue));
-                    if (IsLink(currentValue))
-                    {
-                        var value = GetLink(currentValueStruct);
-                        values.Add(value);
-                    }
-                    else if (IsReference(currentValueStruct.Index))
-                    {
-                        var reference = ReadReference(currentValueStruct);
-                        var currentLinoLink = new LinoLink(reference);
-                        values.Add(currentLinoLink);
-                    }
-                }
+                return GetLinkWithoutId(linkStruct);
             }
-            if (IsLinkWithoutId(linkStruct.Index))
-            {
-                var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsElement);
-                foreach (var currentValue in rightSequenceWalker.Walk(linkStruct.Target))
-                {
-                    var currentValueStruct = new Link<TLinkAddress>(Storage.GetLink(currentValue));
-                    if (IsLink(currentValue))
-                    {
-                        var value = GetLink(currentValueStruct);
-                        values.Add(value);
-                    }
-                    else if (IsReference(currentValueStruct.Index))
-                    {
-                        var currentLinoLink = new LinoLink(ReadReference(currentValueStruct));
-                        values.Add(currentLinoLink);
-                    }
-                }
-            }
-            bool IsElement(TLinkAddress linkIndex)
-            {
-                var source = Storage.GetSource(linkIndex);
-                return _equalityComparer.Equals(LinkWithoutIdMarker, source) || _equalityComparer.Equals(LinkWithIdMarker, source) || _equalityComparer.Equals(ReferenceMarker, source) || Storage.IsPartialPoint(linkIndex);
-            }
-            return new LinoLink(id, values);
+            throw new Exception("The passed argument is not a link");
         }
 }
