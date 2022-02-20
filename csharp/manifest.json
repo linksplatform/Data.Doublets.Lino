@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.DefaultLinoStorage-1.html",
-          "hash": "kgz9K3nu5QfoWwCy6JOTIQ=="
+          "hash": "VUoMCxpfxQrFrKUpnY3sSg=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.ILinoStorage-1.html",
-          "hash": "5OQycA6+oUXsBBIvl6oWsg=="
+          "hash": "9vrSV46FMG9bg5e74n1IcQ=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoDocumentsStorage-1.html",
-          "hash": "CgiuExhfYw9mXnx4qeCBOA=="
+          "hash": "/luZnt1bCTBmZIXFZ75tVQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoExporter-1.html",
-          "hash": "hE7mjRPZyu4hlwHWO//7BA=="
+          "hash": "nrfyqVMjRPS42nk61o2+aA=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoExporterCli-1.html",
-          "hash": "fQvjGKwwCCpgma8IWnFo8g=="
+          "hash": "DFwa4P0GH4Hi489uQW+D6w=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoImporter-1.html",
-          "hash": "rJ+et+2rRF/Cxh9fFNVVOQ=="
+          "hash": "qMDAjnaaT8O8KsdsQyi6mw=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.Data.Doublets.Lino.LinoImporterCli-1.html",
-          "hash": "Aa6aSxL6xtnKPIG+RkqILg=="
+          "hash": "O+hy1k4u0yCLzJe8QY4QFg=="
         }
       },
       "is_incremental": false,
