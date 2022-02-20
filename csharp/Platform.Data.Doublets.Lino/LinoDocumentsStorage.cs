@@ -130,13 +130,13 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
         {
             if (link.Id != null)
             {
-                return CreateLinkWithReference(link);
+                return CreateLinkWithId(link);
             }
             var valuesSequence = CreateValuesSequence(link);
             return Storage.GetOrCreate(LinkWithoutMarker, valuesSequence);
         }
 
-        private TLinkAddress CreateLinkWithReference(LinoLink link)
+        private TLinkAddress CreateLinkWithId(LinoLink link)
         {
             TLinkAddress currentReference = GetOrCreateReferenceLink(link.Id);
             if (link.Values == null)
