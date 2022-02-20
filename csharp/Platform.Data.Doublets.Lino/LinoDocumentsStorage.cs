@@ -44,7 +44,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
 
         public TLinkAddress ReferenceMarker { get; }
         public TLinkAddress LinkMarker { get; }
-        public TLinkAddress LinkWithReferenceMarker { get; }
+        public TLinkAddress LinkWithIdMarker { get; }
         private TLinkAddress _markerIndex { get; set; }
 
         private IConverter<IList<TLinkAddress>?, TLinkAddress> _listToSequenceConverter;
@@ -129,7 +129,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             }
             var valuesSequence = CreateValuesSequence(link);
             var idWithValues = Storage.GetOrCreate(currentReference, valuesSequence);
-            return Storage.GetOrCreate(LinkWithReferenceMarker, idWithValues);
+            return Storage.GetOrCreate(LinkWithIdMarker, idWithValues);
         }
 
         public TLinkAddress CreateValuesSequence(LinoLink parent)
@@ -157,7 +157,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             bool IsElement(TLinkAddress linkIndex)
             {
                 var source = Storage.GetSource(linkIndex);
-                return _equalityComparer.Equals(LinkMarker, source) |  _equalityComparer.Equals(LinkWithReferenceMarker, source) || Storage.IsPartialPoint(linkIndex);
+                return _equalityComparer.Equals(LinkMarker, source) |  _equalityComparer.Equals(LinkWithIdMarker, source) || Storage.IsPartialPoint(linkIndex);
             }
             var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsElement);
             TLinkAddress linksSequence = default;
@@ -185,7 +185,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             string id = default;
             var values = new List<LinoLink>();
             var linkStruct = new Link<TLinkAddress>(link);
-            var isLink = _equalityComparer.Equals(LinkMarker, linkStruct.Source) || _equalityComparer.Equals(LinkWithReferenceMarker, linkStruct.Source);
+            var isLink = _equalityComparer.Equals(LinkMarker, linkStruct.Source) || _equalityComparer.Equals(LinkWithIdMarker, linkStruct.Source);
             if (!isLink)
             {
                 throw new Exception("The source of the passed link is not the link marker.");
@@ -193,13 +193,13 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             bool IsElement(TLinkAddress linkIndex)
             {
                 var source = Storage.GetSource(linkIndex);
-                return _equalityComparer.Equals(LinkMarker, source) || _equalityComparer.Equals(LinkWithReferenceMarker, source) || _equalityComparer.Equals(ReferenceMarker, source) || Storage.IsPartialPoint(linkIndex);
+                return _equalityComparer.Equals(LinkMarker, source) || _equalityComparer.Equals(LinkWithIdMarker, source) || _equalityComparer.Equals(ReferenceMarker, source) || Storage.IsPartialPoint(linkIndex);
             }
             var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsElement);
             foreach (var currentLink in rightSequenceWalker.Walk(linkStruct.Target))
             {
                 var currentLinkStruct = new Link<TLinkAddress>(Storage.GetLink(currentLink));
-                if (_equalityComparer.Equals(LinkMarker, currentLinkStruct.Source) || _equalityComparer.Equals(LinkWithReferenceMarker, currentLinkStruct.Source))
+                if (_equalityComparer.Equals(LinkMarker, currentLinkStruct.Source) || _equalityComparer.Equals(LinkWithIdMarker, currentLinkStruct.Source))
                 {
                     var value = GetLink(currentLinkStruct);
                     values.Add(value);
