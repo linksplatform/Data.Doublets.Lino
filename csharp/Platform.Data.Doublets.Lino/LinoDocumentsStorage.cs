@@ -96,6 +96,12 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
 
         private bool IsLink(TLinkAddress linkAddress) => IsLinkWithId(linkAddress) || IsLinkWithoutId(linkAddress);
 
+        private bool IsReference(TLinkAddress reference)
+        {
+            var source = Storage.GetSource(reference);
+            return _equalityComparer.Equals(ReferenceMarker, source);
+        }
+
         public TLinkAddress GetOrCreateReferenceLink(string content) => Storage.GetOrCreate(ReferenceMarker, StringToUnicodeSequenceConverter.Convert(content));
 
         public string ReadReference(TLinkAddress reference) => ReadReference(Storage.GetLink(reference));
@@ -109,10 +115,6 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             }
             return UnicodeSequenceToStringConverter.Convert(referenceLink.Target);
         }
-
-        public bool IsReference(TLinkAddress reference) => IsReference(Storage.GetLink(reference));
-
-        public bool IsReference(IList<TLinkAddress> reference) => _equalityComparer.Equals(ReferenceMarker, Storage.GetSource(reference));
 
         public void CreateLinks(IList<LinoLink> links)
         {
