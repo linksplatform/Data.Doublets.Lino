@@ -102,7 +102,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
             return _equalityComparer.Equals(ReferenceMarker, source);
         }
 
-        public TLinkAddress GetOrCreateReferenceLink(string content) => Storage.GetOrCreate(ReferenceMarker, StringToUnicodeSequenceConverter.Convert(content));
+        public TLinkAddress GetOrCreateReference(string content) => Storage.GetOrCreate(ReferenceMarker, StringToUnicodeSequenceConverter.Convert(content));
 
         public string ReadReference(TLinkAddress reference) => ReadReference(Storage.GetLink(reference));
 
@@ -138,7 +138,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
 
         private TLinkAddress CreateLinkWithId(LinoLink link)
         {
-            TLinkAddress currentReference = GetOrCreateReferenceLink(link.Id);
+            TLinkAddress currentReference = GetOrCreateReference(link.Id);
             if (link.Values == null)
             {
                 return currentReference;
@@ -160,7 +160,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress> whe
                     values.Add(valueLink);
                     continue;
                 }
-                var currentValueReference = GetOrCreateReferenceLink(currentValue.Id);
+                var currentValueReference = GetOrCreateReference(currentValue.Id);
                 values.Add(currentValueReference);
             }
             return _listToSequenceConverter.Convert(values);
