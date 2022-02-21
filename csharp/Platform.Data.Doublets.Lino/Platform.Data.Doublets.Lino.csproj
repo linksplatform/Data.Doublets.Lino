@@ -30,9 +30,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Platform.Communication.Protocol.Lino" Version="0.4.0"/>
-        <PackageReference Include="Platform.Data.Doublets" Version="0.13.1"/>
-        <PackageReference Include="Platform.Data.Doublets.Sequences" Version="0.0.1"/>
+        <PackageReference Include="Platform.Communication.Protocol.Lino" Version="0.4.0" />
+        <PackageReference Include="Platform.Data.Doublets" Version="0.13.1" />
+        <PackageReference Include="Platform.Data.Doublets.Sequences" Version="0.0.1" />
     </ItemGroup>
 
 </Project>
