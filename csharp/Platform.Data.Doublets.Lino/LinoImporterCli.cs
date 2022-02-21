@@ -28,6 +28,6 @@ public class LinoImporterCli<TLinkAddress> where TLinkAddress : struct
         }
         var importer = new LinoImporter<TLinkAddress>(linoStorage);
         var notation = File.ReadAllText(notationFilePath);
-        importer.Import(notation);
+        importer.Import(notation, documentName);
     }
 }

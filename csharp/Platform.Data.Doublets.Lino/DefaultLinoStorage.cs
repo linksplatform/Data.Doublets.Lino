@@ -13,7 +13,7 @@ public class DefaultLinoStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
         _storage = storage;
     }
 
-    public void CreateLinks(IList<LinoLink> links)
+    public void CreateLinks(IList<LinoLink> links, string? documentName)
     {
         var checkedConverter = CheckedConverter<ulong, TLinkAddress>.Default;
         for (int i = 0; i < links.Count; i++)
@@ -29,7 +29,7 @@ public class DefaultLinoStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
         }
     }
 
-    public IList<LinoLink> GetLinks()
+    public IList<LinoLink> GetLinks(string? documentName)
     {
         var allLinks = _storage.All();
         var linoLinks = new List<LinoLink>(allLinks.Count);

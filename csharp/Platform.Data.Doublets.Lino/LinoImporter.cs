@@ -12,10 +12,10 @@ public class LinoImporter<TLinkAddress>
         _linoDocumentsStorage = linoDocumentsStorage;
     }
 
-    public void Import(string content)
+    public void Import(string content, string? documentName)
     {
         var linoLinks = _parser.Parse(content);
-        _linoDocumentsStorage.CreateLinks(linoLinks);
+        _linoDocumentsStorage.CreateLinks(linoLinks, documentName);
     }
 
 }

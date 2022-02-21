@@ -13,9 +13,9 @@ public class LinoExporter<TLinkAddress>
         _linoDocumentsStorage = linoDocumentsStorage;
     }
 
-    public string GetAllLinks()
+    public string GetAllLinks(string? documentName)
     {
-        var allLinks = _linoDocumentsStorage.GetLinks();
+        var allLinks = _linoDocumentsStorage.GetLinks(documentName);
         return allLinks.Format();
     }
 }

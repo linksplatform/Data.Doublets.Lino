@@ -5,6 +5,6 @@ namespace Platform.Data.Doublets.Lino;
 
 public interface ILinoStorage<TLinkAddress>
 {
-    void CreateLinks(IList<Link> links);
-    IList<Link> GetLinks();
+    void CreateLinks(IList<Link> links, string? documentName);
+    IList<Link> GetLinks(string? documentName);
 }

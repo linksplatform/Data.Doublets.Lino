@@ -2,6 +2,7 @@ using Platform.Data.Doublets.Memory;
 using Platform.Data.Doublets.Memory.United.Generic;
 using Platform.Data.Doublets.Sequences.Converters;
 using Platform.Memory;
+using System;
 using Xunit;
 using TLinkAddress = System.UInt64;
 
@@ -27,9 +28,10 @@ public class ImporterAndExporterTests
         var storage = CreateLinks();
         var linoStorage = new DefaultLinoStorage<TLinkAddress>(storage);
         var importer = new LinoImporter<TLinkAddress>(linoStorage);
-        importer.Import(notation);
+        var documentName = Random.RandomHelpers.Default.Next(Int32.MaxValue).ToString();
+        importer.Import(notation, documentName);
         var exporter = new LinoExporter<TLinkAddress>(linoStorage);
-        var exportedLinks = exporter.GetAllLinks();
+        var exportedLinks = exporter.GetAllLinks(documentName);
         Assert.Equal(notation, exportedLinks);
     }
 
@@ -52,9 +54,10 @@ public class ImporterAndExporterTests
         var storage = CreateLinks();
         var linoStorage = new LinoDocumentsStorage<TLinkAddress>(storage, new BalancedVariantConverter<ulong>(storage));
         var importer = new LinoImporter<TLinkAddress>(linoStorage);
-        importer.Import(notation);
+        var documentName = Random.RandomHelpers.Default.Next(Int32.MaxValue).ToString();
+        importer.Import(notation, documentName);
         var exporter = new LinoExporter<TLinkAddress>(linoStorage);
-        var exportedLinks = exporter.GetAllLinks();
+        var exportedLinks = exporter.GetAllLinks(documentName);
         Assert.Equal(notation, exportedLinks);
     }
 

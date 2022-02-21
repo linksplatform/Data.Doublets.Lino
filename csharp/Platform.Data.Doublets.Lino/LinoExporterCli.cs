@@ -27,7 +27,7 @@ public class LinoExporterCli<TLinkAddress> where TLinkAddress : struct
             linoStorage = new LinoDocumentsStorage<TLinkAddress>(storage, new BalancedVariantConverter<TLinkAddress>(storage));
         }
         var exporter = new LinoExporter<TLinkAddress>(linoStorage);
-        var allLinksNotation = exporter.GetAllLinks();
+        var allLinksNotation = exporter.GetAllLinks(documentName);
         File.WriteAllText(notationFilePath, allLinksNotation);
     }
 }

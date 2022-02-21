@@ -120,14 +120,20 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
         return UnicodeSequenceToStringConverter.Convert(referenceLink.Target);
     }
 
-    public void CreateLinks(IList<LinoLink> links)
+    public void CreateLinks(IList<LinoLink> links, string? documentName)
     {
+        if (string.IsNullOrEmpty(documentName))
+        {
+            throw new Exception("No document name is passed.");
+        }
         var sequenceList = new List<TLinkAddress>();
         for (int i = 0; i < links.Count; i++)
         {
             sequenceList.Add(CreateLink(links[i]));
         }
-        Storage.GetOrCreate(DocumentMarker, _listToSequenceConverter.Convert(sequenceList));
+        var documentNameSequence = StringToUnicodeSequenceConverter.Convert(documentName);
+        var document = Storage.GetOrCreate(DocumentMarker, documentNameSequence);
+        Storage.GetOrCreate(document, _listToSequenceConverter.Convert(sequenceList));
     }
 
     private TLinkAddress CreateLink(LinoLink link)
@@ -170,33 +176,54 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
         return _listToSequenceConverter.Convert(values);
     }
 
-    private TLinkAddress GetDocumentSequence()
+    private TLinkAddress GetDocument(string documentName)
     {
-        var constants = Storage.Constants;
-        var any = constants.Any;
-        TLinkAddress documentLinksSequence = default;
-        Storage.Each(new Link<TLinkAddress>(any, DocumentMarker, any), link =>
+        var documentNameSequence = StringToUnicodeSequenceConverter.Convert(documentName);
+        var document = Storage.SearchOrDefault(DocumentMarker, documentNameSequence);
+        if (_equalityComparer.Equals(default, document))
         {
-            documentLinksSequence = Storage.GetTarget((IList<TLinkAddress>)link);
-            return constants.Continue;
+            throw new Exception($"No document in the storage with name {documentName}.");
+        }
+        return document;
+    }
+
+    private TLinkAddress GetDocumentSequence(string documentName)
+    {
+        var document = GetDocument(documentName);
+        return GetDocumentSequence(document);
+    }
+
+    private TLinkAddress GetDocumentSequence(TLinkAddress document)
+    {
+        var any = Storage.Constants.Any;
+        TLinkAddress documentLinksSequence = default;
+        Storage.Each(new Link<TLinkAddress>(any, document, any), link =>
+        {
+            documentLinksSequence = Storage.GetTarget(link);
+            return Storage.Constants.Break;
         });
         if (_equalityComparer.Equals(default, documentLinksSequence))
         {
-            throw new Exception("No document links in the storage.");
+            throw new Exception("No links assosiated with the passed document in the storage.");
         }
         return documentLinksSequence;
     }
 
-    public IList<LinoLink> GetLinks()
+    public IList<LinoLink> GetLinks(string? documentName)
     {
+        if (string.IsNullOrEmpty(documentName))
+        {
+            throw new Exception("No document name is passed.");
+        }
         var resultLinks = new List<LinoLink>();
         bool IsElement(TLinkAddress linkIndex)
         {
             var source = Storage.GetSource(linkIndex);
             return _equalityComparer.Equals(LinkWithoutIdMarker, source) | _equalityComparer.Equals(LinkWithIdMarker, source) || Storage.IsPartialPoint(linkIndex);
         }
+        var document = GetDocument(documentName);
         var rightSequenceWalker = new RightSequenceWalker<TLinkAddress>(Storage, new DefaultStack<TLinkAddress>(), IsElement);
-        var documentLinksSequence = GetDocumentSequence();
+        var documentLinksSequence = GetDocumentSequence(document);
         var documentLinks = rightSequenceWalker.Walk(documentLinksSequence);
         foreach (var documentLink in documentLinks)
         {
@@ -204,6 +231,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
         }
         return resultLinks;
     }
+
 
     private bool IsLinkOrReferenceOrPartialPoint(TLinkAddress linkIndex)
     {
@@ -243,7 +271,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
         return new LinoLink(id, values);
     }
 
-    public LinoLink GetLinkWithoutId(IList<TLinkAddress> linkWithoudId)
+    private LinoLink GetLinkWithoutId(IList<TLinkAddress> linkWithoudId)
     {
         var values = new List<LinoLink>();
         var linkStruct = new Link<TLinkAddress>(linkWithoudId);
@@ -265,9 +293,9 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
         return new LinoLink(null, values);
     }
 
-    public LinoLink GetLink(TLinkAddress link) => GetLink(Storage.GetLink(link));
+    private LinoLink GetLink(TLinkAddress link) => GetLink(Storage.GetLink(link));
 
-    public LinoLink GetLink(IList<TLinkAddress> link)
+    private LinoLink GetLink(IList<TLinkAddress> link)
     {
         var linkStruct = new Link<TLinkAddress>(link);
         if (IsLinkWithId(linkStruct))
