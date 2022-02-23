@@ -14,7 +14,7 @@ internal static class Program
     /// <para>The args.</para>
     /// <para></para>
     /// </param>
-    private static void Main(params string[] args)
+    private static void Main(params string?[] args)
     {
         new LinoImporterCli<TLinkAddress>().Run(args);
     }
