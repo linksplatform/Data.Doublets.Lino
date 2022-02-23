@@ -132,7 +132,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
             sequenceList.Add(CreateLink(links[i]));
         }
         var documentNameSequence = StringToUnicodeSequenceConverter.Convert(documentName);
-        var document = Storage.GetOrCreate(documentNameSequence, documentNameSequence);
+        var document = Storage.SearchOrDefault(documentNameSequence, documentNameSequence);
         if (!_equalityComparer.Equals(default, document))
         {
             throw new Exception($"The document with name {documentName} already exists.");
