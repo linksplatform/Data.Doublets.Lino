@@ -70,9 +70,69 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="datadoubletslino">Data.Doublets.Lino</h1>
 
-<p>Platform.Data.Doublets.Json Class Library</p>
+<p><a href="https://www.nuget.org/packages/Platform.Data.Doublets.Lino"><img src="https://buildstats.info/nuget/Platform.Data.Doublets.Lino" alt="NuGet Version and Downloads count"></a>
+<a href="https://github.com/linksplatform/Data.Doublets.Lino/actions?workflow=CD"><img src="https://github.com/linksplatform/Data.Doublets.Lino/workflows/CD/badge.svg" alt="Actions Status"></a>
+<a href="https://www.codacy.com/gh/linksplatform/Data.Doublets.Lino/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=linksplatform/Data.Doublets.Lino&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/cd23af97753f4dc2be394daeb2175042" alt="Codacy Badge"></a>
+<a href="https://www.codefactor.io/repository/github/linksplatform/Data.Doublets.Lino"><img src="https://www.codefactor.io/repository/github/linksplatform/Data.Doublets.Lino/badge" alt="CodeFactor"></a></p>
+<h1 id="datadoubletslino"><a href="https://github.com/linksplatform/Data.Doublets.Lino">Data.Doublets.Lino</a></h1>
+<p>LinksPlatform's Platform.Data.Doublets.Lino Class Library.</p>
+<p>Namespace: <a href="https://linksplatform.github.io/Data.Doublets.Lino/csharp/api/Platform.Data.Doublets.Lino.html">Platform.Data.Doublets.Lino</a></p>
+<p>NuGet package: <a href="https://www.nuget.org/packages/Platform.Data.Doublets.Lino">Platform.Data.Doublets.Lino</a></p>
+<h2 id="documentation"><a href="https://linksplatform.github.io/Data.Doublets.Lino/csharp/api/Platform.Data.Doublets.Lino.html">Documentation</a></h2>
+<p><a href="https://linksplatform.github.io/Data.Doublets.Lino/csharp/Platform.Data.Doublets.Lino.pdf">PDF file</a> with code for e-readers.</p>
+<h2 id="depends-on">Depends on</h2>
+<ul>
+<li><a href="https://github.com/linksplatform/Data.Doublets">Platform.Data.Doublets</a></li>
+</ul>
+<h2 id="tools">Tools</h2>
+<h3 id="lino2links"><a href="https://www.nuget.org/packages/lino2links">lino2links</a></h3>
+<h4 id="synopsis">SYNOPSIS</h4>
+<pre><code class="lang-shell">lino2links SOURCE DESTINATION [DOCUMENT_NAME]
+</code></pre>
+<h4 id="parameters">PARAMETERS</h4>
+<ul>
+<li><code>SOURCE</code> - a lino file path.</li>
+<li><code>DESTINATION</code> - a links storage file path.</li>
+<li><code>DOCUMENT_NAME</code> - a document name.</li>
+</ul>
+<h4 id="note">Note:</h4>
+<p><code>DOCUMENT_NAME</code> is used to define what name to save a document with. A links storage can contain multiple lino documents. If document name is not specified the entire links data store is exported or imported as is.</p>
+<h4 id="example">Example</h4>
+<ol>
+<li>Install
+<pre><code class="lang-shell">dotnet tool install --global lino2links
+</code></pre>
+</li>
+<li>Import a lino file from a doublets links storage
+<pre><code class="lang-shell">lino2links notation.lino db.links &quot;MyDocument&quot;
+</code></pre>
+</li>
+</ol>
+<hr>
+<h3 id="links2lino"><a href="https://www.nuget.org/packages/links2lino">links2lino</a></h3>
+<h4 id="synopsis-1">SYNOPSIS</h4>
+<pre><code class="lang-shell">links2lino SOURCE DESTINATION [DOCUMENT_NAME]
+</code></pre>
+<h4 id="parameters-1">PARAMETERS</h4>
+<ul>
+<li><code>SOURCE</code> - a links storage path.</li>
+<li><code>DESTINATION</code> - a lino file path.</li>
+<li><code>DOCUMENT_NAME</code> - a document name.</li>
+</ul>
+<h4 id="note-1">Note:</h4>
+<p><code>DOCUMENT_NAME</code> is used to choose which lino document to export from a links storage. A links storage can contain multiple lino documents. If document name is not specified the entire links data store is exported or imported as is.</p>
+<h4 id="example-1">Example</h4>
+<ol>
+<li>Install
+<pre><code class="lang-shell">dotnet tool install --global links2lino
+</code></pre>
+</li>
+<li>Export lino file to doublets links storage
+<pre><code class="lang-shell">links2lino db.links notation.lino &quot;MyDocument&quot;
+</code></pre>
+</li>
+</ol>
 </article>
           </div>
           
