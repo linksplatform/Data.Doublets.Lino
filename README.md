@@ -16,7 +16,7 @@ NuGet package: [Platform.Data.Doublets.Lino](https://www.nuget.org/packages/Plat
 [PDF file](https://linksplatform.github.io/Data.Doublets.Lino/csharp/Platform.Data.Doublets.Lino.pdf) with code for e-readers.
 
 ## Depends on
-*   [Platform.Data.Doublets](https://github.com/linksplatform/Data.Doublets)
+*   [Platform.Data.Doublets.Sequences](https://github.com/linksplatform/Data.Doublets.Sequences)
 
 ## Tools
 ### [lino2links](https://www.nuget.org/packages/lino2links)
