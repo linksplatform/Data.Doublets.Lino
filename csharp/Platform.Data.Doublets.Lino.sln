@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Data.Doublets.Lino", "csharp\Platform.Data.Doublets.Lino\Platform.Data.Doublets.Lino.csproj", "{A616EC96-94DB-489D-B981-175FC9DA98A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Data.Doublets.Lino", "Platform.Data.Doublets.Lino\Platform.Data.Doublets.Lino.csproj", "{A616EC96-94DB-489D-B981-175FC9DA98A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Data.Doublets.Lino.Tests", "csharp\Platform.Data.Doublets.Lino.Tests\Platform.Data.Doublets.Lino.Tests.csproj", "{2E802380-FC16-452A-8FB0-AA8D8591ED89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Data.Doublets.Lino.Tests", "Platform.Data.Doublets.Lino.Tests\Platform.Data.Doublets.Lino.Tests.csproj", "{2E802380-FC16-452A-8FB0-AA8D8591ED89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Data.Doublets.Lino.Importer", "csharp\Platform.Data.Doublets.Lino.Importer\Platform.Data.Doublets.Lino.Importer.csproj", "{F1F435A5-34B7-4681-B84D-97212C610B32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Data.Doublets.Lino.Importer", "Platform.Data.Doublets.Lino.Importer\Platform.Data.Doublets.Lino.Importer.csproj", "{F1F435A5-34B7-4681-B84D-97212C610B32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Data.Doublets.Lino.Exporter", "csharp\Platform.Data.Doublets.Lino.Exporter\Platform.Data.Doublets.Lino.Exporter.csproj", "{3F9C188A-7C77-48DB-BD08-D67456165D08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platform.Data.Doublets.Lino.Exporter", "Platform.Data.Doublets.Lino.Exporter\Platform.Data.Doublets.Lino.Exporter.csproj", "{3F9C188A-7C77-48DB-BD08-D67456165D08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
