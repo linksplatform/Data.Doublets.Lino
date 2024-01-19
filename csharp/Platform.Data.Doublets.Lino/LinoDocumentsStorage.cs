@@ -61,7 +61,7 @@ public class LinoDocumentsStorage<TLinkAddress> : ILinoStorage<TLinkAddress>
         UnicodeSymbolToCharConverter<TLinkAddress> unicodeSymbolToCharConverter = new(storage, _numberToAddressConverter, unicodeSymbolCriterionMatcher);
         StringToUnicodeSequenceConverter = new CachingConverterDecorator<string, TLinkAddress>(new StringToUnicodeSequenceConverter<TLinkAddress>(storage, charToUnicodeSymbolConverter, balancedVariantConverter, unicodeSequenceMarker));
         RightSequenceWalker<TLinkAddress> sequenceWalker = new(storage, new DefaultStack<TLinkAddress>(), unicodeSymbolCriterionMatcher.IsMatched);
-        UnicodeSequenceToStringConverter = new CachingConverterDecorator<TLinkAddress, string>(new UnicodeSequenceToStringConverter<TLinkAddress>(storage, unicodeSequenceCriterionMatcher, sequenceWalker, unicodeSymbolToCharConverter));
+        UnicodeSequenceToStringConverter = new CachingConverterDecorator<TLinkAddress, string>(new UnicodeSequenceToStringConverter<TLinkAddress>(storage, unicodeSequenceCriterionMatcher, sequenceWalker, unicodeSymbolToCharConverter, unicodeSequenceMarker));
         _listToSequenceConverter = listToSequenceConverter;
     }
 
