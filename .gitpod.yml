@@ -1,0 +1,5 @@
+image: gitpod/workspace-dotnet
+
+tasks:
+  - name: C# Test
+    command: (cd csharp && dotnet test -c Release -f net8)
