@@ -7,7 +7,7 @@
         <VersionPrefix>0.1.0</VersionPrefix>
         <Authors>FreePhoenix888</Authors>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net6</TargetFramework>
+        <TargetFrameworks>net7;net8</TargetFrameworks>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>links2lino</ToolCommandName>
         <AssemblyName>Platform.Data.Doublets.Lino.Exporter</AssemblyName>

@@ -6,7 +6,7 @@
         <AssemblyTitle>Platform.Data.Doublets.Lino</AssemblyTitle>
         <VersionPrefix>0.0.1</VersionPrefix>
         <Authors>FreePhoenix888</Authors>
-        <TargetFramework>net7</TargetFramework>
+        <TargetFrameworks>net7;net8</TargetFrameworks>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <AssemblyName>Platform.Data.Doublets.Lino</AssemblyName>
         <PackageId>Platform.Data.Doublets.Lino</PackageId>
