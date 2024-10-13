@@ -1,6 +1,6 @@
 [![Gitpod](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/linksplatform/Data.Doublets.Lino)
 
-[![NuGet Version and Downloads count](https://buildstats.info/nuget/Platform.Data.Doublets.Lino)](https://www.nuget.org/packages/Platform.Data.Doublets.Lino)
+[![NuGet Version and Downloads count](https://img.shields.io/nuget/v/Platform.Data.Doublets.Lino?label=nuget&style=flat)](https://www.nuget.org/packages/Platform.Data.Doublets.Lino)
 [![Actions Status](https://github.com/linksplatform/Data.Doublets.Lino/workflows/CD/badge.svg)](https://github.com/linksplatform/Data.Doublets.Lino/actions?workflow=CD)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/cd23af97753f4dc2be394daeb2175042)](https://www.codacy.com/gh/linksplatform/Data.Doublets.Lino/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=linksplatform/Data.Doublets.Lino&amp;utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/Data.Doublets.Lino/badge)](https://www.codefactor.io/repository/github/linksplatform/Data.Doublets.Lino)
