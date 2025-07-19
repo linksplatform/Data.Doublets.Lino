@@ -7,7 +7,7 @@
         <VersionPrefix>0.1.0</VersionPrefix>
         <Authors>FreePhoenix888</Authors>
         <OutputType>Exe</OutputType>
-        <TargetFrameworks>net7;net8</TargetFrameworks>
+        <TargetFramework>net8</TargetFramework>
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>lino2links</ToolCommandName>
         <AssemblyName>Platform.Data.Doublets.Lino.Importer</AssemblyName>
@@ -25,7 +25,7 @@
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <PackageReleaseNotes>Arguments order is changed.</PackageReleaseNotes>
+        <PackageReleaseNotes>Update target framework from net7 to net8.</PackageReleaseNotes>
         <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
     </PropertyGroup>
